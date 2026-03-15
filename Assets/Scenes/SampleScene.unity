@@ -189,7 +189,7 @@ MonoBehaviour:
   scoreInt: 0
   bestInt: 0
   group: {fileID: 32959797}
-  blur: {fileID: 655261022}
+  blur_1: {fileID: 655261022}
 --- !u!1 &47618153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,7 +1282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &771593935
 Transform:
   m_ObjectHideFlags: 0
@@ -1620,6 +1620,7 @@ MonoBehaviour:
   cam: {fileID: 963194228}
   listBlock: []
   selected: 0
+  isScaling: 0
   faceMousePos: {x: 0, y: 0}
   isAuto: 0
   state: 0
@@ -3701,7 +3702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1869429695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4164,6 +4165,10 @@ PrefabInstance:
     - target: {fileID: 340476434550049866, guid: 8acd38b285b38ee49adce6c901010a95, type: 3}
       propertyPath: m_Name
       value: ColorControl 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 340476434550049866, guid: 8acd38b285b38ee49adce6c901010a95, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1153515380694769526, guid: 8acd38b285b38ee49adce6c901010a95, type: 3}
       propertyPath: sprites.Array.size

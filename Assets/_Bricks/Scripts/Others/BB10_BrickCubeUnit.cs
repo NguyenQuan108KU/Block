@@ -5,7 +5,7 @@ public class BB10_BrickCubeUnit : MonoBehaviour
 {
     //public TypePattem.Type thisType;
     public Types thisType;
-
+    public BB10_NextViewer viewer;
     public SpriteRenderer render;
 
     public int ID;
@@ -26,7 +26,33 @@ public class BB10_BrickCubeUnit : MonoBehaviour
 
     public AnimationCurve ac;
     public float speed;
+    void OnClickBlock()
+    {
+        Debug.Log("Click Block");
 
+        if (viewer != null)
+        {
+            viewer.ClickPattern();
+        }
+    }
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Collider2D[] hits = Physics2D.OverlapPointAll(mousePos);
+
+            for (int i = 0; i < hits.Length; i++)
+            {
+                if (hits[i].gameObject == gameObject)
+                {
+                    OnClickBlock();
+                    break;
+                }
+            }
+        }
+    }
     public void SetSprite(BB10_ColorData data)
     {
         myData = data;

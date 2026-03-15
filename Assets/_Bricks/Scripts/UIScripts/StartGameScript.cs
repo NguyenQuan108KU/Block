@@ -59,23 +59,11 @@ public class StartGameScript : MonoBehaviour
 
     public void RateClick()
     {
-        #if UNITY_ANDROID
-//        Application.OpenURL("http://play.google.com/store/apps/details?id=" + Application.identifier);
-        #elif UNITY_IPHONE
-        Application.OpenURL("itms-apps://itunes.apple.com/app/id1185235076");
-        #endif
 
     }
 
     public void MoreClick()
     {
-        Application.OpenURL("https://play.google.com/store/apps/developer?id=WaterApp");
-
-//        #if UNITY_ANDROID
-//        Application.OpenURL("http://play.google.com/store/apps/details?id=" + Application.bundleIdentifier);
-//        #elif UNITY_IPHONE
-//        Application.OpenURL("itms-apps://itunes.apple.com/app/id1185235076");
-//        #endif
     }
 
 }

@@ -1,5 +1,5 @@
 using DG.Tweening;
-using Sonat;
+//using Sonat;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,22 +20,28 @@ public class BB10_MainCanvasUI : MonoBehaviour
 
     void CheckPreloadTutorial()
     {
-        if (BB10_Settings.GetTimePlay < 1)
-        {
-            BB10_MainState.typePlay = BB10_MainState.TypePlay.Tutorial;
-        }
-        else
-        {
+        //if (BB10_Settings.GetTimePlay < 1)
+        //{
+        //    BB10_MainState.typePlay = BB10_MainState.TypePlay.Tutorial;
+        //}
+        //else
+        //{
             BB10_MainState.typePlay = BB10_MainState.TypePlay.Normal;
-        }
+        //}
     }
 
     void Start()
     {
+        StartCoroutine(InitGame());
+    }
+    IEnumerator InitGame()
+    {
+        while (BB10_MainObjControl.Instant == null)
+            yield return null;
+
         Preload();
         Reset(false);
     }
-
 
     //public RewardVideoScript rewardVideoScript;
 
@@ -46,14 +52,13 @@ public class BB10_MainCanvasUI : MonoBehaviour
     void Awake()
     {
         mainCanvas = this;
-
-        CheckBundle();
     }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
+                Debug.Log("aaaaa");
             if (blur.activeSelf)
             {
                 blur.SetActive(false);
@@ -69,8 +74,8 @@ public class BB10_MainCanvasUI : MonoBehaviour
         switch (BB10_MainState.typePlay)
         {
             case BB10_MainState.TypePlay.Tutorial:
-                SonatScript.PlayTimes++;
-                SonatScript.LogStartLevel();
+                //SonatScript.PlayTimes++;
+                //SonatScript.LogStartLevel();
                 BB10_MainObjControl.Instant.tutorial.Show();
                 break;
             case BB10_MainState.TypePlay.Normal:
@@ -227,10 +232,10 @@ public class BB10_MainCanvasUI : MonoBehaviour
         BB10_Settings.SetTimePlay(playNumbers);
 
 
-        new SonatLogLevelUp().SetExtraParameter(new[]
-        {
-            new Sonat.LogParameter("game_play","Play Game " + BB10_Settings.GetTimePlay),
-        }).Post();
+        //new SonatLogLevelUp().SetExtraParameter(new[]
+        //{
+        //    new Sonat.LogParameter("game_play","Play Game " + BB10_Settings.GetTimePlay),
+        //}).Post();
 
 
 
@@ -261,10 +266,10 @@ public class BB10_MainCanvasUI : MonoBehaviour
 
         // Log time play
         timePlay++;
-        new SonatLogLevelUp().SetExtraParameter(new[]
-        {
-            new Sonat.LogParameter("game_replay","Replay Game " + timePlay),
-        }).Post();
+        //new SonatLogLevelUp().SetExtraParameter(new[]
+        //{
+        //    new Sonat.LogParameter("game_replay","Replay Game " + timePlay),
+        //}).Post();
 
         switch (BB10_MainState.typePlay)
         {

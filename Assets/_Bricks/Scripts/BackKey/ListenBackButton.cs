@@ -12,7 +12,7 @@ public class ListenBackButton : MonoBehaviour
             switch (BB10_MainState.GetState)
             {
                 case BB10_MainState.State.Home:
-                    HomeBack();
+                    //HomeBack();
                     break;
                 case BB10_MainState.State.Ingame:
                     IngameBack();
@@ -34,10 +34,10 @@ public class ListenBackButton : MonoBehaviour
         }
     }
 #endif
-	void HomeBack()
-    {
-        Application.Quit();
-    }
+	//void HomeBack()
+ //   {
+ //       Application.Quit();
+ //   }
 
     void IngameBack()
     {

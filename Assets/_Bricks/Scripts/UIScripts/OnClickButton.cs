@@ -39,7 +39,7 @@ public abstract class OnClickButton : MonoBehaviour {
 	void OnMouseEnter()
 	{
 		onPos = true;
-		if(!running)
+		if (!running)
 		{
 			StopAllCoroutines();
 			StartCoroutine("ButtonClickZoomOut");
@@ -48,14 +48,14 @@ public abstract class OnClickButton : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		onPos = true;
-		
+		//onPos = true;
+
 	}
 
 	void OnMouseExit()
 	{
 		onPos = false;
-		if(!running)
+		if (!running)
 		{
 			StopAllCoroutines();
 			StartCoroutine("ButtonClickZoomIn");

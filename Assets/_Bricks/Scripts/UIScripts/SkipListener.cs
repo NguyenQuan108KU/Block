@@ -18,24 +18,24 @@ public class SkipListener : MonoBehaviour
     //}
 
     bool onClick = false;
-    private void OnMouseUp()
-    {
-        if(onClick)
-        {
-            return;
-        }
+    //private void OnMouseUp()
+    //{
+    //    if(onClick)
+    //    {
+    //        return;
+    //    }
 
-        onClick = true;
+    //    onClick = true;
 
-        MainAudio.Main.PlaySound(TypeAudio.SoundClick);
+    //    MainAudio.Main.PlaySound(TypeAudio.SoundClick);
 
-        transform.DOScale(new Vector3(1.2f, 1.2f, 1f), 0.1f)
-    .SetLoops(2, LoopType.Yoyo)
-    .OnComplete(() =>
-    {
-        // onClick = false;
-    });
+    //    transform.DOScale(new Vector3(1.2f, 1.2f, 1f), 0.1f)
+    //.SetLoops(2, LoopType.Yoyo)
+    //.OnComplete(() =>
+    //{
+    //    // onClick = false;
+    //});
 
-        BB10_MainCanvasUI.Main.inGameScript.SkipTut();
-    }
+    //    BB10_MainCanvasUI.Main.inGameScript.SkipTut();
+    //}
 }

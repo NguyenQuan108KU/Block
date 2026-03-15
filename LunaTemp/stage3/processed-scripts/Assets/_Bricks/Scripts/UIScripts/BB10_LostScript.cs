@@ -278,24 +278,24 @@ public class BB10_LostScript : MonoBehaviour
         //bestText.text = best.ToString();
     }
 
-    public void RateClick()
-    {
-        Rate();
-    }
+    //public void RateClick()
+    //{
+    //    Rate();
+    //}
 
-    public static string GetRateLink()
-    {
-#if UNITY_IPHONE
-        return "https://apps.apple.com/us/app/fun-block-brick-puzzle/id1508942891";
-#elif UNITY_WP8
-        return "";
-#else
-        return ("https://play.google.com/store/apps/details?id=" + Application.identifier);
-#endif
-    }
+//    public static string GetRateLink()
+//    {
+//#if UNITY_IPHONE
+//        return "https://apps.apple.com/us/app/fun-block-brick-puzzle/id1508942891";
+//#elif UNITY_WP8
+//        return "";
+//#else
+//        return ("https://play.google.com/store/apps/details?id=" + Application.identifier);
+//#endif
+//    }
 
-    public static void Rate()
-    {
-        Application.OpenURL(GetRateLink());
-    }
+    //public static void Rate()
+    //{
+    //    Application.OpenURL(GetRateLink());
+    //}
 }

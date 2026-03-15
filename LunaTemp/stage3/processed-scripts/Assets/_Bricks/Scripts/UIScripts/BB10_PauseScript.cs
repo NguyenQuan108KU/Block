@@ -108,10 +108,10 @@ public class BB10_PauseScript : MonoBehaviour
         BB10_MainCanvasUI.Main.Reset(true);
     }
 
-    public void Exit()
-    {
-        Application.Quit();
-    }
+    //public void Exit()
+    //{
+    //    Application.Quit();
+    //}
 
     public void SetActive(bool isActive)
     {

@@ -63,7 +63,7 @@ public class Kernel : MonoBehaviour
 
     public static T Resolve<T>() where T : BaseService
     {
-        return (T) Services[typeof(T)];
+        return null;
     }
 
     public static T ResolveDirty<T>() where T : BaseService

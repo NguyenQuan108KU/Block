@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BB10_NextViewerControl : MonoBehaviour
@@ -16,6 +17,13 @@ public class BB10_NextViewerControl : MonoBehaviour
     public List<BB10_BrickCubeUnit> listUnit1;
     public List<BB10_BrickCubeUnit> listUnit2;
 
+    void Awake()
+    {
+        for (int i = 0; i < listView.Length; i++)
+        {
+            listView[i].index = i;
+        }
+    }
     public void Preload()
     {
         listUnit0 = new List<BB10_BrickCubeUnit>();

@@ -109,10 +109,10 @@ public class BB10_HomeController : MonoBehaviour {
     {
     }
 
-    public void Exit()
-    {
-        Application.Quit();
-    }
+    //public void Exit()
+    //{
+    //    Application.Quit();
+    //}
 
     public void SetActive(bool isActive)
     {

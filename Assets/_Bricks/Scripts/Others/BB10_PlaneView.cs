@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +17,7 @@ public class BB10_PlaneView : MonoBehaviour
 
     public void SetPattem(List<BB10_BrickCubeUnit> listBlock0, Vector2 pos, BB10_ColorData data, int select, float viewScale)
     {
+        Debug.Log("SetPattem");
         state = State.Drag;
 
         selected = select;
@@ -27,6 +28,7 @@ public class BB10_PlaneView : MonoBehaviour
         listBlockLocalPos = new Vector2[listBlock0.Count];
         for(int i = 0; i < listBlock0.Count; i++)
         {
+
             int indexRow = listBlock0[i].indexRow;
             int indexCol = listBlock0[i].indexCol;
             Vector2 p = listBlock0[i].transform.position;
@@ -41,9 +43,9 @@ public class BB10_PlaneView : MonoBehaviour
             listBlock[i].SetShadowDropBlock(true);
         }
 
-        //ScaleBlock(scaleSmall);
+        ScaleBlock(scaleSmall);
 
-        if(ScaleUpAnim != null && isScaling)
+        if (ScaleUpAnim != null && isScaling)
         {
             StopCoroutine(ScaleUpAnim);
         }
@@ -97,8 +99,8 @@ public class BB10_PlaneView : MonoBehaviour
         listBlock.Clear();
     }
 
-    bool isScaling;
-    bool groundAcepted;
+    public bool isScaling;
+    public bool groundAcepted;
     Vec2 cellAcepted = new Vec2();
     Vec2 lastResetFillCel;
 
@@ -114,7 +116,7 @@ public class BB10_PlaneView : MonoBehaviour
         Drag,
     }
 
-    void Start()
+    void Awake()
     {
         listBlock = new List<BB10_BrickCubeUnit>();
         row = BB10_MainObjControl.Instant.grid.numberRow;
@@ -153,7 +155,7 @@ public class BB10_PlaneView : MonoBehaviour
         currentMousePos = GetFixedMousePos();
         SetBlockPos(originalPos, scaleSmall);
 
-        //nextViewerCtr.listView[selected].ShowAllBlock();
+        nextViewerCtr.listView[selected].ShowAllBlock();
 
         isScaling = false;
     }
@@ -176,7 +178,7 @@ public class BB10_PlaneView : MonoBehaviour
             currentMousePos = GetFixedMousePos();
             Vector2 newPos = Vector2.Lerp(currentPos, currentMousePos, timer / duration);
 
-            //currentMousePos = GetFixedMousePos();
+            currentMousePos = GetFixedMousePos();
             SetBlockPos(newPos, newScale);
             yield return null;
         }
@@ -215,6 +217,7 @@ public class BB10_PlaneView : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0) && listBlock.Count > 0)
         {
+            CheckGround();
             PlacePattemGround();
 
             if (BB10_MainCanvasUI.Main.blur.activeSelf)
@@ -242,7 +245,7 @@ public class BB10_PlaneView : MonoBehaviour
 
     void CheckSelectedBlock()
     {
-        if (groundAcepted && !isScaling /*&& CheckPlaceInTuto()*/)
+        if (groundAcepted && !isScaling)
         {
             timeDelaySetAllBlock = 0f;
 
@@ -251,7 +254,7 @@ public class BB10_PlaneView : MonoBehaviour
             Vector2 posPlace1 = new Vector2(c1, r1);
             Vector2 startPos1 = listBlock[0].transform.position;
             float durationMoveDrop = (startPos1 - posPlace1).magnitude / speedMoveDrop;
-            //durationMoveDrop = Mathf.Min(durationMoveDrop, 0.09f);
+            durationMoveDrop = Mathf.Min(durationMoveDrop, 0.09f);
             List<BB10_BrickCubeUnit> newListCubeUnit = new List<BB10_BrickCubeUnit>();
             for (int i = 0; i < listBlock.Count; i++)
             {
@@ -295,12 +298,13 @@ public class BB10_PlaneView : MonoBehaviour
             {
                 MainAudio.Main.PlaySound(TypeAudio.SoundStop);
             }
-        }
+    }
         else
         {
+            Debug.Log("Quay lại");
             timeDelaySetAllBlock = duration / 2f;
 
-            if(ScaleUpAnim != null && isScaling)
+            if (ScaleUpAnim != null && isScaling)
             {
                 StopCoroutine(ScaleUpAnim);
             }
@@ -319,8 +323,9 @@ public class BB10_PlaneView : MonoBehaviour
                 BB10_MainObjControl.Instant.tutorial.StartFinger();
                 grid.TurnOffAllFillLine();
             }
-
         }
+        Debug.Log("groundAcepted" + groundAcepted);
+        Debug.Log("isScaling" + isScaling);
     }
 
     bool CheckPlaceInTuto()
@@ -347,6 +352,7 @@ public class BB10_PlaneView : MonoBehaviour
 
     void CheckGround()
     {
+        Debug.Log("bbbbb");
         if (IsInvalidGrid())
         {
             groundAcepted = true;
@@ -367,6 +373,7 @@ public class BB10_PlaneView : MonoBehaviour
             groundView.HideAllBlock();
             lastResetFillCel = null;
         }
+        Debug.Log("CheckGround: " + groundAcepted);
     }
 
     bool IsInvalidGrid()
@@ -379,6 +386,7 @@ public class BB10_PlaneView : MonoBehaviour
 
         if(BB10_MainState.typePlay == BB10_MainState.TypePlay.Tutorial)
         {
+            Debug.Log("Tutorial");
             if((Mathf.RoundToInt(mainPos.x) == cellTutAcepted.C) && (Mathf.RoundToInt(mainPos.y) == cellTutAcepted.R))
             {
                 isAcept = true;
@@ -390,6 +398,7 @@ public class BB10_PlaneView : MonoBehaviour
         }
         else
         {
+            Debug.Log("Normal");
             isAcept = !grid.InvalidPoint(listBlock, cellAcepted.R, cellAcepted.C);
         }
 
@@ -408,16 +417,6 @@ public class BB10_PlaneView : MonoBehaviour
         else
         {
             return faceMousePos;
-        }
-    }
-
-    void OnApplicationPause(bool pauseStatus)
-    {
-        //Debug.Log("OnApplicationPause: " + pauseStatus);
-
-        if(!pauseStatus)
-        {
-            //groundView.HideAllBlock();
         }
     }
 }

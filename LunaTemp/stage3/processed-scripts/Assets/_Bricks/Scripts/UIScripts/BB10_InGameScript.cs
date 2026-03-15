@@ -19,14 +19,14 @@ public class BB10_InGameScript : MonoBehaviour
 
     private void Awake()
     {
-        blur.SetActive(false);
+        //blur_1.SetActive(false);
         //skip.SetActive(false);
     }
 
     private void Start()
     {
-        scoreTxt.GetComponent<MeshRenderer>().sortingOrder = -7;
-        bestTxt.GetComponent<MeshRenderer>().sortingOrder = -7;
+        //scoreTxt.GetComponent<MeshRenderer>().sortingOrder = -7;
+        //bestTxt.GetComponent<MeshRenderer>().sortingOrder = -7;
     }
 
     public void Preload()
@@ -127,18 +127,19 @@ public class BB10_InGameScript : MonoBehaviour
         scoreTxt.text = scoreInt.ToString();
     }
 
-    public GameObject blur;
+    public GameObject blur_1;
     //public GameObject skip;
 
     public void StartTut()
     {
-        blur.SetActive(true);
+        Debug.Log("blur_1");
+        //blur_1.SetActive(true);
         //skip.SetActive(true);
     }
 
     public void FinishTut()
     {
-        blur.SetActive(false);
+        blur_1.SetActive(false);
         //skip.SetActive(false);
     }
 
@@ -149,7 +150,7 @@ public class BB10_InGameScript : MonoBehaviour
         BB10_MainObjControl.Instant.tutorial.SkipTut();
         //BB10_MainCanvasUI.mainCanvas.pauseScript.Restart();
 
-        blur.SetActive(false);
+        blur_1.SetActive(false);
         //skip.SetActive(false);
     }
 

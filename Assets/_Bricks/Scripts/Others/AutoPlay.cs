@@ -12,18 +12,22 @@ public class AutoPlay : MonoBehaviour
 
     void Start()
     {
-
         Time.timeScale = timeScale;
+        StartCoroutine(InitAuto());
+    }
+    IEnumerator InitAuto()
+    {
+        while (BB10_MainObjControl.Instant == null)
+            yield return null;
 
         grid = BB10_MainObjControl.Instant.grid;
         nextViewerCtr = BB10_MainObjControl.Instant.nextViewerCtr;
         planeView = BB10_MainObjControl.Instant.planeViewCrt;
+
         planeView.isAuto = true;
-        //BB10_MainCanvasUI.Main.lostScript.isAuto = true;
 
         StartCoroutine(StartAuto());
     }
-
     IEnumerator StartAuto()
     {
         while (true)

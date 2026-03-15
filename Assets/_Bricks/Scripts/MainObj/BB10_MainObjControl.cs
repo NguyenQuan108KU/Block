@@ -16,6 +16,7 @@ public class BB10_MainObjControl : MonoBehaviour
 
     public void Preload()
     {
+        Debug.Log("PATTERN CREATED");
         grid.Preload();
         //nextViewerCtr.Preload();
         //effectCtr.Preload();
@@ -40,16 +41,24 @@ public class BB10_MainObjControl : MonoBehaviour
 
     void Awake()
     {
-        Application.targetFrameRate = 60;
+        //Application.targetFrameRate = 60;
         Time.timeScale = 1;
         screenCtr.Fix(grid.numberRow, grid.numberCol);
         main = this;
        
     }
-    private void Start()
+    IEnumerator Start()
     {
+        Debug.Log(BB10_MainState.typePlay);
+        yield return null;
+        yield return null;
+
         Preload();
+
+        yield return null;
+
         nextViewerCtr.CheckUpdateNewPattem();
+
         BB10_MainState.state = BB10_MainState.State.Ingame;
     }
 

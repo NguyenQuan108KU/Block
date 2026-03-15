@@ -13,11 +13,11 @@ public class BB10_TimeCtr_AdsManager : MonoBehaviour
     {
         if (!isPaused)
         {
-            int timePlay = BB10_Settings.GetTimePlayForDuration;
-            BB10_Settings.SetTimePlayForDuration(timePlay + 1);
-            int timer = Mathf.RoundToInt(Time.time - durationPlay);
-            float durationAvg = ((timePlay * BB10_Settings.GetDuration_Avg) + timer) / (float)(timePlay + 1);
-            BB10_Settings.SetDuration_Avg(Mathf.RoundToInt(durationAvg));
+            //int timePlay = BB10_Settings.GetTimePlayForDuration;
+            //BB10_Settings.SetTimePlayForDuration(timePlay + 1);
+            //int timer = Mathf.RoundToInt(Time.time - durationPlay);
+            //float durationAvg = ((timePlay * BB10_Settings.GetDuration_Avg) + timer) / (float)(timePlay + 1);
+            //BB10_Settings.SetDuration_Avg(Mathf.RoundToInt(durationAvg));
             //Debug.Log("duration : " + timer);
             //Debug.Log("durationAvg : " + durationAvg);
         }

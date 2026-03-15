@@ -51,8 +51,6 @@ public class BB10_PattemCreater : MonoBehaviour
         Vec2[] pattemList = dataInfor[thisType];
 
         List<BB10_BrickCubeUnit> listCubeUnit = new List<BB10_BrickCubeUnit>();
-        Debug.Log("Create pattern: " + thisType);
-        Debug.Log("Cube count: " + pattemList.Length);
         BB10_ColorData data = BB10_MainObjControl.Instant.colorControl.GetRandSpriteData();
 
         for(int i = 0; i < pattemList.Length; i++)

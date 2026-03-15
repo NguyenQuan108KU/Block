@@ -18,6 +18,10 @@ public class BB10_Grid : MonoBehaviour
     public List<fillData> listFill;
 
     BB10_ColorControl colorCtr;
+    private void Awake()
+    {
+        Preload();
+    }
 
     public struct fillData
     {
@@ -196,6 +200,12 @@ public class BB10_Grid : MonoBehaviour
 
             if (unitRow < 0 || unitRow >= numberRow || unitCol < 0 || unitCol >= numberCol)
             {
+                return true;
+            }
+
+            if (grid == null)
+            {
+                Debug.LogError("Grid chưa được khởi tạo!");
                 return true;
             }
 
@@ -714,8 +724,8 @@ public class BB10_Grid : MonoBehaviour
                     grid[row, col] = null;
                 }
 
-        SonatScript.PlayTimes++;
-        SonatScript.LogStartLevel();
+        //SonatScript.PlayTimes++;
+        //SonatScript.LogStartLevel();
     }
 
 
@@ -735,17 +745,17 @@ public class BB10_Grid : MonoBehaviour
         return new Vec2(0, 0);
     }
 
-    void OnApplicationPause(bool pauseStatus)
-    {
-        if(pauseStatus
-            && (BB10_MainState.state == BB10_MainState.State.Ingame
-            || BB10_MainState.state == BB10_MainState.State.Pause))
-        {
-            SaveData();
-        }
+    //void OnApplicationPause(bool pauseStatus)
+    //{
+    //    if(pauseStatus
+    //        && (BB10_MainState.state == BB10_MainState.State.Ingame
+    //        || BB10_MainState.state == BB10_MainState.State.Pause))
+    //    {
+    //        SaveData();
+    //    }
 
-        CheckBundle();
-    }
+    //    CheckBundle();
+    //}
     
     
 
@@ -803,8 +813,8 @@ public class BB10_Grid : MonoBehaviour
 
         if(save == "")
         {
-            SonatScript.PlayTimes++;
-            SonatScript.LogStartLevel();
+            //SonatScript.PlayTimes++;
+            //SonatScript.LogStartLevel();
             return;
         }
         BB10_Settings.SetContinueData("");

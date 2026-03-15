@@ -1,298 +1,164 @@
 {
   "ignores": [
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Attributes/IndexAsEnumAttribute.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/DuongSerializationExtensions.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/SdkExtenstions.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/ILogParameterValueRetriever.cs",
-    "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/RemoteConfigHelper.cs"
+    "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs",
+    "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs",
+    "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs",
+    "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs",
+    "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs",
+    "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs"
   ],
   "groups": [
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/BackKey/BB10_MainState.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/MainObj/BB10_MainObjControl.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/AutoPlay.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_Grid.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_NextViewer.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_NextViewerControl.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_PlaneView.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_Tutorial.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_InGameScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_HomeController.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_MainCanvasUI.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_LostScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_CupShaker.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_FaderHandler.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_PauseScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_Settings.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_TimeCtr_AdsManager.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/MoveLerp.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/ItemUnit.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/AddSelectItem.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/SelectLevelScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/StarLevelControl.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Audio/Scripts/MainAudio.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ScreenCtr.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Audio/Scripts/TypeAudio.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/OnClickCanvasButton.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/PauseGameListener.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/SkipListener.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/StartGameScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Audio/Scripts/InputAudio.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ShowHelpCtr.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_BrickCubeUnit.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_GroundView.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ColorData.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ColorControl.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_PattemCreater.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Bricks_PattemTableObj.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Bricks_PattemData.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/Vec2.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/GameDefine.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BoomControl.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_PopupRate.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_RateStar.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/SonatScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/tracking_module/SonatLogs.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/AdsManager.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/InAppShopItemView.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/BaseInAppView.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/KernelLoadedView.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/ServicesTestPanel.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/PlayerPrefInt.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Kernel.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/BaseService.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/AppFlyerController.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/BasePurchaser.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/InAppAvailableScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Attributes/IndexAsEnumAttribute.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Attributes.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/DefaultRemoteDatabase.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/RemoteConfigController.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Remote/PlayerPrefRemote.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/FireBaseController.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/ILogParameterValueRetriever.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/tracking_module/TrackingEnums.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/StupidEventTracking/CustomGetTrackingScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/tracking_module/LogParamter.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/tracking_module/SonatAnalyticTracker.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/tracking_module/SonatLogRecursive.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/OnScreenDebugLog.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/UIDebugLog.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/SonatUltil.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/BaseEnums.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/SyncToBanner.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/IAction.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/Admob/AdsInstanceAdmob.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/AdsInstance.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/AdsInstanceIronSource.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/RemoteConfigKey.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/RemoteConfigDefault.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/RemoteConfigHelper.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/TextRemoteConfig.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/ConditionalFields/ConditionalFieldAttribute.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/ConditionalFields/TestConditional.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/RemoteDataByLevel.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/JsonSampleCreator.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/ButtonAttribute/MyButtonAttribute.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Loading/RotateScriptSmooth.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Attributes/EnumList.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/AdsInstanceMaxLovin.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Test/BuiltInButtonTestSdk.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/TestingSettings.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/TestGameManager.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/DuongSerializationExtensions.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/Purchaser.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/FacebookController.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/RemoteLoadDatabase/BaseRemoteDatabase.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/OnServiceLoadingScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/OnServiceLoadedScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Loading/LoadingTransition.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_TypePattem.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ScoreCtr.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/CameraScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/Exit.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/BackKey/BB10_MainState.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/MainObj/BB10_MainObjControl.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/AutoPlay.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_Grid.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_NextViewer.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_BrickCubeUnit.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_GroundView.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_PlaneView.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_Tutorial.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_InGameScript.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_NextViewerControl.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_HomeController.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_MainCanvasUI.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_LostScript.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_CupShaker.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_FaderHandler.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_PauseScript.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_Settings.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/ItemUnit.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/AddSelectItem.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/SelectLevelScript.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/StarLevelControl.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Audio/Scripts/MainAudio.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ScreenCtr.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Audio/Scripts/TypeAudio.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/OnClickCanvasButton.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/PauseGameListener.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/StartGameScript.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Audio/Scripts/InputAudio.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ShowHelpCtr.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_PopupRate.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_RateStar.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Bricks_PattemTableObj.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_PattemCreater.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Bricks_PattemData.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/Vec2.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ColorData.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ColorControl.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BoomControl.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/GameDefine.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_TypePattem.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ScoreCtr.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/CameraScript.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/Exit.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/BackKey/ListenBackButton.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/BackKey/ListenBackButton.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/MainObj/BB10_EffectControl.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/MainObj/BB10_EffectControl.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ColorCtr.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/UnitListColor.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/DataSource.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ColorCtr.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/UnitListColor.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/DataSource.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_EffectController.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_EffectController.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/Boom.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_TimeCtr_AdsManager.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/MoveLerp.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/DrawLine.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/Boom.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/FitCamera.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/DrawLine.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/gridOverlay.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/FitCamera.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/Group.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/gridOverlay.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/OnChangeScale.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/Group.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/QuadCenterColor.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/OnChangeScale.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/QuadLerpColor.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/QuadCenterColor.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/RotateY.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/QuadLerpColor.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BackGroundScript.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/RotateY.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BG/BgScale.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BackGroundScript.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BgQuadMesh.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BG/BgScale.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/MyButton.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/OnClickButton.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BgQuadMesh.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/ScaleInOut.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/MyButton.cs",
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/OnClickButton.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/UILightRepeat.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/ScaleInOut.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/UIShaker.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/SkipListener.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/UISpread.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/UILightRepeat.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/UIShaker.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/UISpread.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Notification/MiniJSON.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Notification/NotificationSystem.cs"
+      "E:/Block/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/AdmobConsentHelper.cs"
+      "D:/6.4.0/pipeline/templates/LunaCompiler/Scripts/Properties/AssemblyInfo.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/AskGDPRScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/AskScriptBase.cs"
+      "D:/6.4.0/pipeline/templates/LunaCompiler/Scripts/Sources/OtherDummyScript.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Attributes/IndexParam.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/BackgroundFitter.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Certificate.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/ExposedScriptableObjectAttribute.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/FpsDebugController.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/GDPRScript.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Helper.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Loading/FadeScript.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Loading/RotateScriptSnap.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Misc.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/ProjectSettings.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/SdkExtenstions.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/ServiceLocator.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/Admob/AdsInstanceAdmobAMZ.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/Admob/AdsInstanceAdUnitBanner.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/Admob/AdsInstanceAdUnitNativeBanner.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Services/AdsInstanceMaxLovinMrect.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/SonatInterface.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Test/SetPlayerPref.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Test/ShowTestPopupButton.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/Scripts/Test/TestPopup.cs"
-    ],
-    [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/sonat_sdk/tracking_module/SonatLogs_Dummy.cs"
-    ],
-    [
-      "G:/6.4.0/pipeline/templates/LunaCompiler/Scripts/Properties/AssemblyInfo.cs"
-    ],
-    [
-      "G:/6.4.0/pipeline/templates/LunaCompiler/Scripts/Sources/OtherDummyScript.cs"
-    ],
-    [
-      "G:/6.4.0/pipeline/templates/LunaCompiler/Scripts/obj/Debug/.NETFramework,Version=v4.7.AssemblyAttributes.cs"
+      "D:/6.4.0/pipeline/templates/LunaCompiler/Scripts/obj/Debug/.NETFramework,Version=v4.7.AssemblyAttributes.cs"
     ]
   ]
 }

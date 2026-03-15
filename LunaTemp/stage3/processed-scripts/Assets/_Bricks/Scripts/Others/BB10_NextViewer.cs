@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class BB10_NextViewer : MonoBehaviour
 {
+
+
     public int index;
     public float scale;
     public float durationLight;
@@ -18,7 +20,10 @@ public class BB10_NextViewer : MonoBehaviour
     {
         myType = type;
         listBlock = listUnit;
-
+        for (int i = 0; i < listBlock.Count; i++)
+        {
+            listBlock[i].viewer = this;
+        }
         RotatePattem(numberRotate); 
 
         FixCenterPos();
@@ -182,14 +187,24 @@ public class BB10_NextViewer : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    public void ClickPattern()
     {
-        if ((state == State.Show || state == State.Hide) && BB10_MainState.GetState == BB10_MainState.State.Ingame)
+        Debug.Log("Click Pattern index = " + index);
+
+        if ((state == State.Show || state == State.Hide)
+            && BB10_MainState.GetState == BB10_MainState.State.Ingame)
         {
-            BB10_MainObjControl.Instant.planeViewCrt.SetPattem(listBlock, transform.position, listBlock[0].myData, index, scale);
+            BB10_MainObjControl.Instant.planeViewCrt.SetPattem(
+                listBlock,
+                transform.position,
+                listBlock[0].myData,
+                index,
+                scale
+            );
+
             MainAudio.Main.PlaySound(TypeAudio.SellectPattem);
             HideAllBlock();
-            
+
             if (BB10_MainState.typePlay == BB10_MainState.TypePlay.Tutorial)
             {
                 BB10_MainObjControl.Instant.tutorial.StopFinger();
