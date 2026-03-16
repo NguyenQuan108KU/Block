@@ -9,13 +9,50 @@ public class TutorialManager : SingletonBase<TutorialManager>
     public BB10_NextViewer firstBlock;
     public GameObject Hand;
 
-
+    [Header("---------- Tutorial -----------")]
+    public float idleTimer = 0f;
+    public float idleTimeToShow = 3f;
+    public BB10_NextViewer blockTutorial;
+    public List<BB10_NextViewer> nextViewers;
+    Sequence bounceTween;
+    bool isTutorialPlaying = false;
+    bool isFirstTouch = false;
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(0.2f); // đợi block spawn
+        yield return new WaitForSeconds(0.5f); // đợi block spawn
         ShowTutorial();
     }
+    private void Update()
+    {
+        // click lần đầu tiên mới bắt đầu tính idle
+        if (!isFirstTouch)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                isFirstTouch = true;
+            }
+            return;
+        }
 
+        if (Input.GetMouseButton(0))
+        {
+            idleTimer = 0f;
+            return;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            ResetIdleTimer();
+            return;
+        }
+
+        idleTimer += Time.deltaTime;
+
+        if (idleTimer >= idleTimeToShow && !isTutorialPlaying)
+        {
+            StartBounceTutorial();
+        }
+    }
     void ShowTutorial()
     {
         if (firstBlock.listBlock == null || firstBlock.listBlock.Count == 0)
@@ -33,7 +70,6 @@ public class TutorialManager : SingletonBase<TutorialManager>
 
         PlayHandTutorial();
     }
-
     void PlayHandTutorial()
     {
         Hand.SetActive(true);
@@ -81,4 +117,57 @@ public class TutorialManager : SingletonBase<TutorialManager>
 
         return center;
     }
+    void StartBounceTutorial()
+    {
+        blockTutorial = GetValidBlock();
+
+        if (blockTutorial == null)
+            return;
+
+        isTutorialPlaying = true;
+
+        bounceTween = DOTween.Sequence();
+
+        foreach (var cube in blockTutorial.listBlock)
+        {
+            bounceTween.Join(
+                cube.transform
+                    .DOScale(0.65f, 0.35f)
+                    .SetLoops(-1, LoopType.Yoyo)
+                    .SetEase(Ease.InOutSine)
+            );
+        }
+    }
+    void ResetIdleTimer()
+    {
+        idleTimer = 0f;
+
+        if (bounceTween != null)
+        {
+            bounceTween.Kill();
+            bounceTween = null;
+
+            if (blockTutorial.listBlock != null && blockTutorial.listBlock != null)
+            {
+                foreach (var cube in blockTutorial.listBlock)
+                {
+                    cube.transform.localScale = Vector3.one;
+                }
+            }
+
+            isTutorialPlaying = false;
+        }
+    }
+    BB10_NextViewer GetValidBlock()
+{
+    foreach (var viewer in nextViewers)
+    {
+        if (viewer != null && viewer.listBlock != null && viewer.listBlock.Count > 0)
+        {
+            return viewer;
+        }
+    }
+
+    return null;
+}
 }

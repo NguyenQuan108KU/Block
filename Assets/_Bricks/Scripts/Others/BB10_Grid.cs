@@ -406,7 +406,7 @@ public class BB10_Grid : MonoBehaviour
     //Tạo effect CompleteText
     public void CreateEffect(Vector3 pos)
     {
-        //MainAudio.Main.PlaySound(TypeAudio.CollectBlock);
+        MainAudio.Main.PlaySound(TypeAudio.CollectBlock);
         GameObject effect = Instantiate(completeText, pos, Quaternion.identity);
         effect.GetComponent<CompleteBlocks>().PlayRandom();
     }

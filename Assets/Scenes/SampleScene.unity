@@ -1098,7 +1098,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 368296254}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1883256721}
+        m_TargetAssemblyTypeName: GamePlayManager, Assembly-CSharp
+        m_MethodName: GoToStore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &368296254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3501,12 +3513,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 86.57
+  m_fontSize: 75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 86.57
+  m_fontSizeMax: 75
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -4166,11 +4178,11 @@ MonoBehaviour:
   - type: 3
     audioClip: {fileID: 8300000, guid: 42d288086c47a4543bc65d6300c2ecae, type: 3}
     loop: 0
-    volume: 0.6
+    volume: 0.7
   - type: 4
-    audioClip: {fileID: 8300000, guid: 929a834c60ac163479e9de1fa28deb2f, type: 3}
+    audioClip: {fileID: 8300000, guid: 42d288086c47a4543bc65d6300c2ecae, type: 3}
     loop: 0
-    volume: 0.8
+    volume: 0.7
   - type: 6
     audioClip: {fileID: 8300000, guid: b85e1b309c6c4af4c959663eff49f02f, type: 3}
     loop: 0
@@ -4193,6 +4205,10 @@ MonoBehaviour:
     volume: 0.4
   - type: 15
     audioClip: {fileID: 8300000, guid: aa9f4376b72f3d946acf2bb3cfd259ae, type: 3}
+    loop: 0
+    volume: 0.5
+  - type: 13
+    audioClip: {fileID: 8300000, guid: 2d4ca04bbf220984a867ae0f8ac139f3, type: 3}
     loop: 0
     volume: 0.5
   isMute: 0
@@ -4434,7 +4450,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1196294361}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1883256721}
+        m_TargetAssemblyTypeName: GamePlayManager, Assembly-CSharp
+        m_MethodName: GoToStore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1196294361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6294,6 +6322,13 @@ MonoBehaviour:
   groundView: {fileID: 1827738388}
   firstBlock: {fileID: 1401194847}
   Hand: {fileID: 404368986}
+  idleTimer: 0
+  idleTimeToShow: 3
+  blockTutorial: {fileID: 0}
+  nextViewers:
+  - {fileID: 1401194847}
+  - {fileID: 1375317568}
+  - {fileID: 440144888}
 --- !u!1 &1552008002
 GameObject:
   m_ObjectHideFlags: 0
@@ -7004,7 +7039,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1691290643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1883256721}
+        m_TargetAssemblyTypeName: GamePlayManager, Assembly-CSharp
+        m_MethodName: GoToStore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1691290643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7960,6 +8007,7 @@ MonoBehaviour:
   textScore: {fileID: 780518789}
   win: {fileID: 1460960891}
   lose: {fileID: 1489072567}
+  isFinishGame: 0
 --- !u!114 &1883256722
 MonoBehaviour:
   m_ObjectHideFlags: 0

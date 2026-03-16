@@ -217,6 +217,7 @@ public class BB10_PlaneView : MonoBehaviour
         {
             CheckGround();
             PlacePattemGround();
+            MainAudio.Main.PlaySound(TypeAudio.SoundStop);
 
             if (BB10_MainCanvasUI.Main.blur.activeSelf)
             {
@@ -354,7 +355,6 @@ public class BB10_PlaneView : MonoBehaviour
             // check fill line
             if (lastResetFillCel == null || lastResetFillCel.R != cellAcepted.R || lastResetFillCel.C != cellAcepted.C)
             {
-//                Debug.Log("Check");
                 grid.TurnOffAllFillLine();
                 grid.CheckGridFillTest(listBlock, cellAcepted.R, cellAcepted.C, listBlock[0].myData);
                 lastResetFillCel = new Vec2(cellAcepted.R, cellAcepted.C);
