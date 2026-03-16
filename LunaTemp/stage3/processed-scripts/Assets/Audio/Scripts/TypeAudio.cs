@@ -15,6 +15,6 @@ public enum TypeAudio
 	SoundPopup,
 	SoundFinishVideo,
     SellectPattem,
-
+    CollectBlock,
     StartGame,
 }

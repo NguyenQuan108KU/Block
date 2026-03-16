@@ -46,7 +46,6 @@ public class OnClickCanvasButton : MonoBehaviour, IPointerClickHandler
         }
 		
         onClick.Invoke();
-        MainAudio.Main.PlaySound(TypeAudio.SoundClick);
         currentTime = 0;
 		
         while (currentTime < timeZoomIn)

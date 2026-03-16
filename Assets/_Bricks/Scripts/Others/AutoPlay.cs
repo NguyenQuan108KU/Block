@@ -104,7 +104,6 @@ public class AutoPlay : MonoBehaviour
 
             if (BB10_MainState.state == BB10_MainState.State.GameOver)
             {
-                Debug.Log("Wait game over");
                 yield return new WaitForSeconds(8.5f);
                 //BB10_MainCanvasUI.Main.lostScript.TryAgainButton();
                 yield return new WaitForSeconds(2f);

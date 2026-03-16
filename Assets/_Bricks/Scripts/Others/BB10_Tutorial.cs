@@ -182,7 +182,7 @@ public class BB10_Tutorial : MonoBehaviour
         BB10_NextViewer next = BB10_MainObjControl.Instant.nextViewerCtr.listView[1];
         Types type = Types.I1;
         List<BB10_BrickCubeUnit> listUnit = BB10_MainObjControl.Instant.pattemCreater.CreatePattem(type, next.transform.position, next.scale);
-        next.SetPattem(listUnit, type, 0);
+        next.SetPattem(listUnit, type, 0, true);
         next.state = BB10_NextViewer.State.Show;
 
         Vector2 startPos = next.transform.position;
@@ -245,7 +245,7 @@ public class BB10_Tutorial : MonoBehaviour
         BB10_NextViewer next = BB10_MainObjControl.Instant.nextViewerCtr.listView[1];
         Types type = Types.I2;
         List<BB10_BrickCubeUnit> listUnit = BB10_MainObjControl.Instant.pattemCreater.CreatePattem(type, next.transform.position, next.scale);
-        next.SetPattem(listUnit, type, 1);
+        next.SetPattem(listUnit, type, 1, true);
         //next.RotatePattemOne();
         next.rotateTime = 1;
         next.state = BB10_NextViewer.State.Show;
@@ -319,7 +319,7 @@ public class BB10_Tutorial : MonoBehaviour
         BB10_NextViewer next = BB10_MainObjControl.Instant.nextViewerCtr.listView[0];
         Types type = Types.I1;
         List<BB10_BrickCubeUnit> listUnit = BB10_MainObjControl.Instant.pattemCreater.CreatePattem(type, next.transform.position, next.scale);
-        next.SetPattem(listUnit, type, 0);
+        next.SetPattem(listUnit, type, 0, true);
         next.state = BB10_NextViewer.State.Show;
 
         Vector2 startPos = next.transform.position;
@@ -341,7 +341,7 @@ public class BB10_Tutorial : MonoBehaviour
         BB10_NextViewer next = BB10_MainObjControl.Instant.nextViewerCtr.listView[2];
         Types type = Types.I2;
         List<BB10_BrickCubeUnit> listUnit = BB10_MainObjControl.Instant.pattemCreater.CreatePattem(type, next.transform.position, next.scale);
-        next.SetPattem(listUnit, type, 0);
+        next.SetPattem(listUnit, type, 0, true);
         next.state = BB10_NextViewer.State.Show;
 
         Vector2 startPos = next.transform.position;
@@ -361,7 +361,7 @@ public class BB10_Tutorial : MonoBehaviour
         BB10_NextViewer next = BB10_MainObjControl.Instant.nextViewerCtr.listView[1];
         Types type = Types.O2;
         List<BB10_BrickCubeUnit> listUnit = BB10_MainObjControl.Instant.pattemCreater.CreatePattem(type, next.transform.position, next.scale);
-        next.SetPattem(listUnit, type, 0);
+        next.SetPattem(listUnit, type, 0, true);
         next.state = BB10_NextViewer.State.Show;
 
         Vector2 startPos = next.transform.position;

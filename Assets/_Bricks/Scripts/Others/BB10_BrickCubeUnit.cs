@@ -28,7 +28,6 @@ public class BB10_BrickCubeUnit : MonoBehaviour
     public float speed;
     void OnClickBlock()
     {
-        Debug.Log("Click Block");
 
         if (viewer != null)
         {
@@ -48,6 +47,8 @@ public class BB10_BrickCubeUnit : MonoBehaviour
                 if (hits[i].gameObject == gameObject)
                 {
                     OnClickBlock();
+                    TutorialManager.Instance.Hand.SetActive(false);
+                    //MainAudio.Main.PlaySound(TypeAudio.SoundClick);
                     break;
                 }
             }

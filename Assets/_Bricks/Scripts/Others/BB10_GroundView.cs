@@ -13,6 +13,13 @@ public class BB10_GroundView : MonoBehaviour
     SpriteRenderer GetCube()
     {
         SpriteRenderer render = Instantiate(groundPrefab).GetComponent<SpriteRenderer>();
+
+        render.sortingOrder = -1;   // ghost nằm dưới block thật
+
+        Color c = render.color;
+        c.a = 0.35f;                // làm block mờ
+        render.color = c;
+
         listBlockRender.Add(render);
         return render;
     }
@@ -45,14 +52,19 @@ public class BB10_GroundView : MonoBehaviour
             int posRow = row - (listUnit[0].indexRow - listUnit[i].indexRow);
             int posCol = col - (listUnit[0].indexCol - listUnit[i].indexCol);
             listBlockRender[i].transform.position = new Vector2(posCol, posRow);
-                
+
             if (ID != data.ID)
             {
                 listBlockRender[i].sprite = data.sprite;
+
+                Color c = listBlockRender[i].color;
+                c.a = 0.35f;       // giữ block mờ
+                listBlockRender[i].color = c;
             }
 
         }
 
         ID = data.ID;
     }     
+
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,6 +6,8 @@ using UnityEngine;
 public class BB10_NextViewerControl : MonoBehaviour
 {
     public Bricks_PattemTableObj pattemTableObj;
+    public BB10_SpawnBlockData spawnData;
+    int spawnIndex = 0;
 
     public BB10_NextViewer[] listView;
 
@@ -93,6 +95,7 @@ public class BB10_NextViewerControl : MonoBehaviour
 
     public void GreyWhenGameOver()
     {
+        Debug.Log("Game Over");
         listView[0].GreyWhenGameOver();
         listView[1].GreyWhenGameOver();
         listView[2].GreyWhenGameOver();    
@@ -102,9 +105,9 @@ public class BB10_NextViewerControl : MonoBehaviour
     {
         if (IsGameOver())
         {
-            //BB10_MainCanvasUI.Main.lostScript.GameOver(true);
-            BB10_MainCanvasUI.Main.StopWaitShowAdBreask();
-
+            Debug.Log("Game Over");
+            TimerProgress.Instance.StopTimer();
+            GamePlayManager.Instance.GameOver(false);
             GreyWhenGameOver();
         }
     }
@@ -135,17 +138,35 @@ public class BB10_NextViewerControl : MonoBehaviour
             SetAllBlockFromList(listUnit1);
             SetAllBlockFromList(listUnit2);
 
-            type0 = pattemTableObj.GetFixedRandomType(score);
-            type1 = pattemTableObj.GetFixedRandomType(score);
-            type2 = pattemTableObj.GetFixedRandomType(score);
+            //type0 = pattemTableObj.GetFixedRandomType(score);
+            //type1 = pattemTableObj.GetFixedRandomType(score);
+            //type2 = pattemTableObj.GetFixedRandomType(score);
+
+            if (spawnIndex < spawnData.spawnGroups.Length)
+            {
+                SpawnGroup g = spawnData.spawnGroups[spawnIndex];
+
+                type0 = g.block1;
+                type1 = g.block2;
+                type2 = g.block3;
+
+                spawnIndex++;
+            }
+            else
+            {
+                // chuyển sang random hệ thống
+                type0 = pattemTableObj.GetFixedRandomType(score);
+                type1 = pattemTableObj.GetFixedRandomType(score);
+                type2 = pattemTableObj.GetFixedRandomType(score);
+            }
 
             listUnit0 = BB10_MainObjControl.Instant.pattemCreater.CreatePattem(type0, listView[0].transform.position, listView[0].scale);
             listUnit1 = BB10_MainObjControl.Instant.pattemCreater.CreatePattem(type1, listView[1].transform.position, listView[1].scale);
             listUnit2 = BB10_MainObjControl.Instant.pattemCreater.CreatePattem(type2, listView[2].transform.position, listView[2].scale);
 
-            listView[0].SetPattem(listUnit0, type0, Random.Range(0, 4));
-            listView[1].SetPattem(listUnit1, type1, Random.Range(0, 4));
-            listView[2].SetPattem(listUnit2, type2, Random.Range(0, 4));
+            listView[0].SetPattem(listUnit0, type0, Random.Range(0, 4), true);
+            listView[1].SetPattem(listUnit1, type1, Random.Range(0, 4), true);
+            listView[2].SetPattem(listUnit2, type2, Random.Range(0, 4), true);
         }
         while(InvalidAllPattem() || NumberPattemO2(type0, type1, type2) > 2);
 

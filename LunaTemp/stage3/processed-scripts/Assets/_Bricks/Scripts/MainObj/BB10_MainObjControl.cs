@@ -16,7 +16,6 @@ public class BB10_MainObjControl : MonoBehaviour
 
     public void Preload()
     {
-        Debug.Log("PATTERN CREATED");
         grid.Preload();
         //nextViewerCtr.Preload();
         //effectCtr.Preload();
@@ -49,11 +48,11 @@ public class BB10_MainObjControl : MonoBehaviour
     }
     IEnumerator Start()
     {
-        Debug.Log(BB10_MainState.typePlay);
+        Preload();
+        BB10_MainObjControl.Instant.grid.LoadDataSave();
         yield return null;
         yield return null;
 
-        Preload();
 
         yield return null;
 

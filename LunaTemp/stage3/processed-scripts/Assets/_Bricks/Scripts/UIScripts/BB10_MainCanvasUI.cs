@@ -58,7 +58,6 @@ public class BB10_MainCanvasUI : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-                Debug.Log("aaaaa");
             if (blur.activeSelf)
             {
                 blur.SetActive(false);
@@ -210,7 +209,7 @@ public class BB10_MainCanvasUI : MonoBehaviour
                 else
                 {
                     BB10_MainObjControl.Instant.screenCtr.StartNoAnim();
-                    BB10_MainObjControl.Instant.grid.LoadDataSave();
+                    //BB10_MainObjControl.Instant.grid.LoadDataSave();
                 }
 
                 //MainObjControl.Instant.screenCtr.StartAnim();

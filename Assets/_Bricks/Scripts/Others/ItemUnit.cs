@@ -99,8 +99,6 @@ public class ItemUnit : MonoBehaviour, IPointerClickHandler
         }
 
 //        MainCanvas.Main.startGameScript.StartPlayLevel(index);
-
-        MainAudio.Main.PlaySound(TypeAudio.SoundClick);
         currentTime = 0;
 
         while (currentTime < timeZoomIn)

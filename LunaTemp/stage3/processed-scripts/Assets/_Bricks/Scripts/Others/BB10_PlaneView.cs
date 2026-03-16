@@ -17,7 +17,6 @@ public class BB10_PlaneView : MonoBehaviour
 
     public void SetPattem(List<BB10_BrickCubeUnit> listBlock0, [Bridge.Ref] Vector2 pos, [Bridge.Ref] BB10_ColorData data, int select, float viewScale)
     {
-        Debug.Log("SetPattem");
         state = State.Drag;
 
         selected = select;
@@ -207,7 +206,6 @@ public class BB10_PlaneView : MonoBehaviour
     {
         if (state == State.Drag && listBlock.Count > 0 && !isScaling)
         {
-            Debug.Log("Drag");  
             SetBlockPos(GetFixedMousePos(), scale);
             CheckGround();
         }
@@ -301,7 +299,6 @@ public class BB10_PlaneView : MonoBehaviour
     }
         else
         {
-            Debug.Log("Quay lại");
             timeDelaySetAllBlock = duration / 2f;
 
             if (ScaleUpAnim != null && isScaling)
@@ -324,8 +321,6 @@ public class BB10_PlaneView : MonoBehaviour
                 grid.TurnOffAllFillLine();
             }
         }
-        Debug.Log("groundAcepted" + groundAcepted);
-        Debug.Log("isScaling" + isScaling);
     }
 
     bool CheckPlaceInTuto()
@@ -352,7 +347,6 @@ public class BB10_PlaneView : MonoBehaviour
 
     void CheckGround()
     {
-        Debug.Log("bbbbb");
         if (IsInvalidGrid())
         {
             groundAcepted = true;
@@ -373,7 +367,6 @@ public class BB10_PlaneView : MonoBehaviour
             groundView.HideAllBlock();
             lastResetFillCel = null;
         }
-        Debug.Log("CheckGround: " + groundAcepted);
     }
 
     bool IsInvalidGrid()
@@ -386,7 +379,6 @@ public class BB10_PlaneView : MonoBehaviour
 
         if(BB10_MainState.typePlay == BB10_MainState.TypePlay.Tutorial)
         {
-            Debug.Log("Tutorial");
             if((Mathf.RoundToInt(mainPos.x) == cellTutAcepted.C) && (Mathf.RoundToInt(mainPos.y) == cellTutAcepted.R))
             {
                 isAcept = true;
@@ -398,7 +390,6 @@ public class BB10_PlaneView : MonoBehaviour
         }
         else
         {
-            Debug.Log("Normal");
             isAcept = !grid.InvalidPoint(listBlock, cellAcepted.R, cellAcepted.C);
         }
 

@@ -7,6 +7,7 @@ public enum TypeAudio
     SoundScore,
     SoundClick,
     SoundLose,
+    SoundWin,
     SoundStop,
     SoundCollect,
     SoundPutFall,
@@ -15,6 +16,7 @@ public enum TypeAudio
 	SoundPopup,
 	SoundFinishVideo,
     SellectPattem,
-
+    CollectBlock,
     StartGame,
+    WaringTime
 }

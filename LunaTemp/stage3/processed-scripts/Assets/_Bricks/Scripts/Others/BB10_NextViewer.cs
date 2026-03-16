@@ -15,8 +15,9 @@ public class BB10_NextViewer : MonoBehaviour
     public Types myType;
 
     public int rotateTime;
+    
 
-    public void SetPattem(List<BB10_BrickCubeUnit> listUnit, Types type, int numberRotate)
+    public void SetPattem(List<BB10_BrickCubeUnit> listUnit, Types type, int numberRotate, bool isRotate)
     {
         myType = type;
         listBlock = listUnit;
@@ -24,7 +25,8 @@ public class BB10_NextViewer : MonoBehaviour
         {
             listBlock[i].viewer = this;
         }
-        RotatePattem(numberRotate); 
+        if(isRotate)
+            RotatePattem(numberRotate);
 
         FixCenterPos();
 
@@ -189,7 +191,6 @@ public class BB10_NextViewer : MonoBehaviour
 
     public void ClickPattern()
     {
-        Debug.Log("Click Pattern index = " + index);
 
         if ((state == State.Show || state == State.Hide)
             && BB10_MainState.GetState == BB10_MainState.State.Ingame)

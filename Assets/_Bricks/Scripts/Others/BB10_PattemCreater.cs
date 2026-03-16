@@ -74,15 +74,19 @@ public class BB10_PattemCreater : MonoBehaviour
             thisCubeUnit.SetShadowDropBlock(false);
         }
         return listCubeUnit;
-    }               
+    }
 
     public BB10_BrickCubeUnit CreateABlock(Vector2 pos, float scale)
     {
         BB10_BrickCubeUnit newCubeUnit = GetCube();
         newCubeUnit.transform.localScale = new Vector3(scale, scale, scale);
         newCubeUnit.transform.position = pos;
+
+        newCubeUnit.row = Mathf.RoundToInt(pos.y);
+        newCubeUnit.col = Mathf.RoundToInt(pos.x);
+
         return newCubeUnit;
-    }       
+    }
 
     Vec2[] listO0 = new Vec2[]
     {

@@ -18,6 +18,11 @@ public class BB10_Grid : MonoBehaviour
     public List<fillData> listFill;
 
     BB10_ColorControl colorCtr;
+
+    public GameObject completeText;
+    List<Vector2> effectPositions = new List<Vector2>();
+
+    public int score;
     private void Awake()
     {
         Preload();
@@ -205,12 +210,13 @@ public class BB10_Grid : MonoBehaviour
 
             if (grid == null)
             {
-                Debug.LogError("Grid chưa được khởi tạo!");
                 return true;
             }
 
             if (grid[unitRow, unitCol] != null)
             {
+                Debug.Log("Cell occupied " + unitRow + " " + unitCol);
+
                 return true;
             }
         }
@@ -333,6 +339,9 @@ public class BB10_Grid : MonoBehaviour
         {
             if (isColFull(col, newCubeUnit))
             {
+                Vector2 pos = GetCenterCol(col);
+                effectPositions.Add(pos);
+                GamePlayManager.Instance.UpScore(10);
                 for (int i = 0; i < newCubeUnit.Count; i++)
                 {
                     if (newCubeUnit[i].col == col)
@@ -352,6 +361,9 @@ public class BB10_Grid : MonoBehaviour
         {
             if (isRowFull(row, newCubeUnit, listColDeleted))
             {
+                Vector2 pos = GetCenterRow(row);
+                effectPositions.Add(pos);
+                GamePlayManager.Instance.UpScore(10);
                 for (int i = 0; i < newCubeUnit.Count; i++)
                 {
                     if (newCubeUnit[i].row == row)
@@ -366,6 +378,20 @@ public class BB10_Grid : MonoBehaviour
         }   
 
         int scoreFillLine = GameDefine.GetScore(numberLine);
+        if (effectPositions.Count > 0)
+        {
+            Vector2 center = Vector2.zero;
+
+            for (int i = 0; i < effectPositions.Count; i++)
+            {
+                center += effectPositions[i];
+            }
+
+            center /= effectPositions.Count;
+
+            CreateEffect(center);
+            effectPositions.Clear();
+        }
         if (scoreFillLine > 0)
         {
             isCollect = true;
@@ -378,7 +404,23 @@ public class BB10_Grid : MonoBehaviour
 
         BB10_MainCanvasUI.Main.inGameScript.SetNewScore(scoreFillLine, newCubeUnit.Count);  
     }
-
+    //Tạo effect CompleteText
+    public void CreateEffect([Bridge.Ref] Vector3 pos)
+    {
+        MainAudio.Main.PlaySound(TypeAudio.CollectBlock);
+        GameObject effect = Instantiate(completeText, pos, Quaternion.identity);
+        effect.GetComponent<CompleteBlocks>().PlayRandom();
+    }
+    //Lấy tâm hàng
+    Vector2 GetCenterRow(int row)
+    {
+        return new Vector2((numberCol - 1) * 0.5f, 0);
+    }
+    //Lấy tâm cột
+    Vector2 GetCenterCol(int col)
+    {
+        return new Vector2(col, 0);
+    }
     public bool isRowFull(int row, List<BB10_BrickCubeUnit> newCubeUnit, List<int> listColDeleted)
     {
         if(listColDeleted.Count == 0)
@@ -808,16 +850,29 @@ public class BB10_Grid : MonoBehaviour
 
     public void LoadDataSave()
     {
-        string save = BB10_Settings.GetContinueData;
-        BB10_Settings.SetContinue(0);
+        string save = "";
 
-        if(save == "")
+        if (save == "")
         {
-            //SonatScript.PlayTimes++;
-            //SonatScript.LogStartLevel();
+            //save = "0-0-0-0-0-0-0-0-0-0-"
+            //     + "0-1-0-0-0-0-0-0-0-0-"
+            //     + "0-0-1-0-0-0-0-0-0-0-"
+            //     + "0-0-0-1-0-0-0-0-0-0-"
+            //     + "0-0-0-0-1-0-0-0-0-0-"
+            //     + "0-0-0-0-0-0-0-0-0-0-"
+            //     + "0-0-0-0-0-0-0-0-0-0-"
+            //     + "0-0-0-0-0-0-0-0-0-0-"
+            //     + "0-0-0-0-0-0-0-0-0-0-"
+            //     + "0-0-0-0-0-0-0-0-0-0-"
+            //     + "+0+++";
+            save = "";
+        }
+        if (string.IsNullOrEmpty(save))
+        {
+            Debug.Log("No save data");
             return;
         }
-        BB10_Settings.SetContinueData("");
+        //BB10_Settings.SetContinueData("");
 
         string[] wordsTotal = save.Split('+');
 
@@ -830,15 +885,21 @@ public class BB10_Grid : MonoBehaviour
                 int number = int.Parse(words[count]);
                 if(number == 0)
                 {
-
+                    Debug.Log("null");
                 }
-                else if(number > 0)
+                else if (number > 0)
                 {
+                    BB10_BrickCubeUnit block = pattemCreater.CreateABlock(new Vector2(col, row), 1);
 
-                    grid[row, col] = pattemCreater.CreateABlock(new Vector2(col, row), 1);
-                    grid[row, col].SetSprite(colorCtr.GetSpriteData(number - 1));
-                    grid[row, col].row = row;
-                    grid[row, col].col = col;
+                    block.SetSprite(colorCtr.GetSpriteData(number - 1));
+
+                    block.row = row;
+                    block.col = col;
+
+                    block.indexRow = row;
+                    block.indexCol = col;
+
+                    grid[row, col] = block;
                 }
                 count++;
             }
@@ -856,8 +917,8 @@ public class BB10_Grid : MonoBehaviour
                 Types type = pattemCreater.GetTypeFromString(wordsPattem[0]);
                 List<BB10_BrickCubeUnit> listUnit = BB10_MainObjControl.Instant.pattemCreater.CreatePattem(type, next.transform.position, next.scale);
                 next.state = BB10_NextViewer.State.Show;
-                next.SetPattem(listUnit, type, int.Parse(wordsPattem[1]));
-                next.SetPattem(listUnit, type, Random.Range(0, 4)); // int.Parse(wordsPattem[1]));
+                next.SetPattem(listUnit, type, int.Parse(wordsPattem[1]), false);
+                next.SetPattem(listUnit, type, Random.Range(0, 4), false);
                 next.FixCenterPos();
                 next.CheckImpossible();
             }
