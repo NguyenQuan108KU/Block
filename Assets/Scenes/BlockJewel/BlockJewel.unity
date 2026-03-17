@@ -7042,7 +7042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundView: {fileID: 1827738388}
-  firstBlock: {fileID: 1401194847}
+  firstBlock: {fileID: 1375317568}
   Hand: {fileID: 404368986}
   idleTimer: 0
   idleTimeToShow: 3
@@ -7051,6 +7051,8 @@ MonoBehaviour:
   - {fileID: 1401194847}
   - {fileID: 1375317568}
   - {fileID: 440144888}
+  r: 2
+  c: 2
 --- !u!1 &1552008002
 GameObject:
   m_ObjectHideFlags: 0
@@ -7259,7 +7261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pattemTableObj: {fileID: 11400000, guid: 755cc80241a505a4eb6c7edde11aa62d, type: 2}
-  spawnData: {fileID: 11400000, guid: a810c4ec7a3057c4585b03aff8328c84, type: 2}
+  spawnData: {fileID: 11400000, guid: 930401f59fc610944af375a9d379c79d, type: 2}
   listView:
   - {fileID: 1401194847}
   - {fileID: 1375317568}

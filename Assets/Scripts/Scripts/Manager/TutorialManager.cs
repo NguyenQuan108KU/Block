@@ -17,6 +17,9 @@ public class TutorialManager : SingletonBase<TutorialManager>
     Sequence bounceTween;
     bool isTutorialPlaying = false;
     bool isFirstTouch = false;
+
+    public int r;
+    public int c;
     IEnumerator Start()
     {
         yield return new WaitForSeconds(0.5f); // đợi block spawn
@@ -60,8 +63,8 @@ public class TutorialManager : SingletonBase<TutorialManager>
 
         List<BB10_BrickCubeUnit> listUnit = firstBlock.listBlock;
 
-        int row = 0;
-        int col = 0;
+        int row = r;
+        int col = c;
 
         BB10_ColorData data = listUnit[0].myData;
 
