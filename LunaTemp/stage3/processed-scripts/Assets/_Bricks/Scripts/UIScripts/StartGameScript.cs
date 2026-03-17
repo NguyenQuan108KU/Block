@@ -35,7 +35,6 @@ public class StartGameScript : MonoBehaviour
 
     public void StartPlayGame()
     {
-        MainAudio.Main.PlaySound(TypeAudio.SoundClick);
         Middle();
     }
 

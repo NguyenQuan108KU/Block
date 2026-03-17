@@ -14,6 +14,7 @@
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/AutoPlay.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_Grid.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_NextViewer.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Manager/TutorialManager.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_BrickCubeUnit.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_GroundView.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_PlaneView.cs",
@@ -32,13 +33,19 @@
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/SelectLevelScript.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/StarLevelControl.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Audio/Scripts/MainAudio.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ScreenCtr.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Manager/GamePlayManager.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Manager/TimerProgress.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Utils/SingletonBase.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Manager/ResponsiveManager.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Event/GameEvent.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Responsive/CameraResponsive.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Responsive/ResponsiveBase.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Responsive/ResponsiveWorld.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Audio/Scripts/TypeAudio.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/OnClickCanvasButton.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/PauseGameListener.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/StartGameScript.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/Audio/Scripts/InputAudio.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/PlayableAPI/PlayableAPI.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ShowHelpCtr.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/StartGameScript.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_PopupRate.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BB10_RateStar.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Data/Bricks_PattemTableObj.cs",
@@ -50,19 +57,32 @@
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ColorControl.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BoomControl.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/GameDefine.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ScreenCtr.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_TypePattem.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/GamePlayManager.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Effect/CompleteBlocks.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Effect/TextAndSound.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/BB10_ScoreCtr.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/CameraScript.cs",
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/Exit.cs"
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/Exit.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/PauseGameListener.cs"
     ],
     [
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/BackKey/ListenBackButton.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Event/GameEvent.cs"
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Common/CTAButton.cs"
+    ],
+    [
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Common/ScaleElement.cs"
+    ],
+    [
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Common/TextMeshProController.cs"
+    ],
+    [
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Common/TweenConfigSO.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Common/TweenData.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Common/UITween.cs",
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Common/UITweenElement.cs"
     ],
     [
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/MainObj/BB10_EffectControl.cs"
@@ -107,9 +127,6 @@
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/Others/RotateY.cs"
     ],
     [
-      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/TimerProgress.cs"
-    ],
-    [
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/BackGroundScript.cs"
     ],
     [
@@ -121,6 +138,9 @@
     [
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/MyButton.cs",
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/OnClickButton.cs"
+    ],
+    [
+      "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/OnClickCanvasButton.cs"
     ],
     [
       "G:/BlockPuzzle/LunaTemp/stage3/processed-scripts/Assets/_Bricks/Scripts/UIScripts/ScaleInOut.cs"

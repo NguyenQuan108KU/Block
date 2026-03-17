@@ -36,7 +36,7 @@ public class BB10_BrickCubeUnit : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !GamePlayManager.Instance.isFinishGame)
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -47,6 +47,8 @@ public class BB10_BrickCubeUnit : MonoBehaviour
                 if (hits[i].gameObject == gameObject)
                 {
                     OnClickBlock();
+                    GamePlayManager.Instance.UpClick();
+                    TutorialManager.Instance.Hand.SetActive(false);
                     MainAudio.Main.PlaySound(TypeAudio.SoundClick);
                     break;
                 }

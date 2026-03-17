@@ -23,11 +23,39 @@ public class BB10_Grid : MonoBehaviour
     List<Vector2> effectPositions = new List<Vector2>();
 
     public int score;
+
+    public GameObject cellPrefab;
+    public Transform parentGrid; // để chứa grid cho gọn
+    public float cellSize = 1f;  // khoảng cách giữa các ô
+    public bool isCreateCell;
     private void Awake()
     {
         Preload();
+        if(isCreateCell)
+            SpawnGridVisual();
     }
+void SpawnGridVisual()
+{
+    gridPos = new Vector2[numberRow, numberCol];
 
+    float startX = -numberCol / 2f + 3.5f;
+    float startY = -numberRow / 2f + 3.5f;
+
+    for (int row = 0; row < numberRow; row++)
+    {
+        for (int col = 0; col < numberCol; col++)
+        {
+            Vector2 pos = new Vector2(
+                startX + col,
+                startY + row
+            );
+
+            GameObject cell = Instantiate(cellPrefab, pos, Quaternion.identity, transform);
+
+            gridPos[row, col] = pos;
+        }
+    }
+}
     public struct fillData
     {
         public int cubeRow;
@@ -58,11 +86,11 @@ public class BB10_Grid : MonoBehaviour
     IEnumerator GrayBlock(BB10_BrickCubeUnit unit, float targetGray, bool isGrayIn)
     {
         float timer = 0;
-        while(timer < durationGray)
+        while (timer < durationGray)
         {
             timer += Time.deltaTime;
             Sprite sprite;
-            if(isGrayIn)
+            if (isGrayIn)
             {
                 sprite = colorCtr.GetSprite(unit.GetSpriteID, timer * targetGray / durationGray);
             }
@@ -75,7 +103,7 @@ public class BB10_Grid : MonoBehaviour
             yield return null;
         }
 
-        if(!isGrayIn)
+        if (!isGrayIn)
         {
             unit.SetSprite(colorCtr.GetSpriteData(unit.GetSpriteID));
         }
@@ -84,11 +112,11 @@ public class BB10_Grid : MonoBehaviour
     float GetRandGray()
     {
         float rand = Random.value;
-        if(rand > 0.24f)
+        if (rand > 0.24f)
         {
             return fullGray;
         }
-        else if(rand > 0.1f)
+        else if (rand > 0.1f)
         {
             return halfGray;
         }
@@ -104,39 +132,39 @@ public class BB10_Grid : MonoBehaviour
             for (int col = 0; col < numberCol; col++)
             {
                 vecs.Add(new Vec2(row, col));
-            }  
+            }
         }
 
         while (vecs.Count > 0)
         {
-			for (int i = 0; i < 3; i++)
-			{
-				int rand = Random.Range(0, vecs.Count);
-				if (grid[vecs[rand].R, vecs[rand].C] != null)
-				{
-					if (isGrayIn)
-					{
-						float randGray = GetRandGray();
-						grid[vecs[rand].R, vecs[rand].C].targetGray = randGray;
-						StartCoroutine(GrayBlock(grid[vecs[rand].R, vecs[rand].C], randGray, isGrayIn));
-					}
-					else
-					{
-						StartCoroutine(GrayBlock(grid[vecs[rand].R, vecs[rand].C], grid[vecs[rand].R, vecs[rand].C].targetGray, isGrayIn));
-					}
+            for (int i = 0; i < 3; i++)
+            {
+                int rand = Random.Range(0, vecs.Count);
+                if (grid[vecs[rand].R, vecs[rand].C] != null)
+                {
+                    if (isGrayIn)
+                    {
+                        float randGray = GetRandGray();
+                        grid[vecs[rand].R, vecs[rand].C].targetGray = randGray;
+                        StartCoroutine(GrayBlock(grid[vecs[rand].R, vecs[rand].C], randGray, isGrayIn));
+                    }
+                    else
+                    {
+                        StartCoroutine(GrayBlock(grid[vecs[rand].R, vecs[rand].C], grid[vecs[rand].R, vecs[rand].C].targetGray, isGrayIn));
+                    }
 
-					
-					yield return new WaitForSeconds(waitUnit);
-				}
-				vecs.RemoveAt(rand);
 
-				if (vecs.Count == 0)
-				{
-					break;
-				}
-			}
+                    yield return new WaitForSeconds(waitUnit);
+                }
+                vecs.RemoveAt(rand);
+
+                if (vecs.Count == 0)
+                {
+                    break;
+                }
+            }
         }
-    }        
+    }
 
     public bool InvalidPlacePattem(List<BB10_BrickCubeUnit> listUnit)
     {
@@ -148,8 +176,8 @@ public class BB10_Grid : MonoBehaviour
                 {
                     return false;
                 }
-            }  
-        }   
+            }
+        }
 
         return true;
     }
@@ -170,8 +198,8 @@ public class BB10_Grid : MonoBehaviour
                         return true;
                     }
                 }
-            }  
-        }   
+            }
+        }
 
         return false;
     }
@@ -187,8 +215,8 @@ public class BB10_Grid : MonoBehaviour
                 {
                     return new Vector2(col, row);
                 }
-            }  
-        }   
+            }
+        }
 
         return Vector2.zero;
     }
@@ -215,7 +243,6 @@ public class BB10_Grid : MonoBehaviour
 
             if (grid[unitRow, unitCol] != null)
             {
-                Debug.Log("Cell occupied " + unitRow + " " + unitCol);
 
                 return true;
             }
@@ -230,26 +257,26 @@ public class BB10_Grid : MonoBehaviour
         {
             if (isColFullTest(col, listUnit, mainRow, mainCol))
             {
-//                Debug.Log("run 11");
+                //                Debug.Log("run 11");
                 ChangeSpriteFillCol(col, data);
             }
-        }   
+        }
 
         for (int row = 0; row < numberRow; row++)
         {
             if (isRowFullTest(row, listUnit, mainRow, mainCol))
             {
-//                Debug.Log("run 11");
+                //                Debug.Log("run 11");
                 ChangeSpriteFillRow(row, data);
             }
-        }   
+        }
     }
 
     public bool IsRowFillWith(int r, int c)
     {
-        for(int col = 0; col < numberCol; col++)
+        for (int col = 0; col < numberCol; col++)
         {
-            if(grid[r, col] == null && col != c)
+            if (grid[r, col] == null && col != c)
             {
                 return false;
             }
@@ -259,9 +286,9 @@ public class BB10_Grid : MonoBehaviour
 
     public bool IsColFillWith(int r, int c)
     {
-        for(int row = 0; row < numberRow; row++)
+        for (int row = 0; row < numberRow; row++)
         {
-            if(grid[row, c] == null && row != r)
+            if (grid[row, c] == null && row != r)
             {
                 return false;
             }
@@ -277,7 +304,7 @@ public class BB10_Grid : MonoBehaviour
             {
                 return false;
             }
-        }   
+        }
         return true;
     }
 
@@ -289,9 +316,9 @@ public class BB10_Grid : MonoBehaviour
             {
                 return false;
             }
-        }   
+        }
         return true;
-    }              
+    }
 
     public void ChangeSpriteFillCol(int col, [Bridge.Ref] BB10_ColorData data)
     {
@@ -308,7 +335,7 @@ public class BB10_Grid : MonoBehaviour
 
                 grid[row, col].SetSprite(data);
             }
-        }   
+        }
     }
 
     public void ChangeSpriteFillRow(int row, [Bridge.Ref] BB10_ColorData data)
@@ -326,14 +353,14 @@ public class BB10_Grid : MonoBehaviour
 
                 grid[row, col].SetSprite(data);
             }
-        }   
+        }
     }
 
     public void CheckGrid(List<BB10_BrickCubeUnit> newCubeUnit, ref bool isCollect)
     {
         int numberLine = 0;
         List<Vector2> listFillPos = new List<Vector2>();
-		List<int> listColDeleted = new List<int>();
+        List<int> listColDeleted = new List<int>();
 
         for (int col = 0; col < numberCol; ++col)
         {
@@ -352,10 +379,10 @@ public class BB10_Grid : MonoBehaviour
 
                 numberLine++;
                 deleteCol(col, newCubeUnit);
-				listColDeleted.Add(col);
+                listColDeleted.Add(col);
 
-			}
-        }   
+            }
+        }
 
         for (int row = 0; row < numberRow; row++)
         {
@@ -375,7 +402,7 @@ public class BB10_Grid : MonoBehaviour
                 numberLine++;
                 deleteRow(row, newCubeUnit);
             }
-        }   
+        }
 
         int scoreFillLine = GameDefine.GetScore(numberLine);
         if (effectPositions.Count > 0)
@@ -398,11 +425,11 @@ public class BB10_Grid : MonoBehaviour
             ClearListFill();
 
             int score = 0;
-           // BB10_MainObjControl.Instant.scoreCtr.ShowText(CenterOfList(listFillPos), scoreFillLine);
+            // BB10_MainObjControl.Instant.scoreCtr.ShowText(CenterOfList(listFillPos), scoreFillLine);
         }
 
 
-        BB10_MainCanvasUI.Main.inGameScript.SetNewScore(scoreFillLine, newCubeUnit.Count);  
+        BB10_MainCanvasUI.Main.inGameScript.SetNewScore(scoreFillLine, newCubeUnit.Count);
     }
     //Tạo effect CompleteText
     public void CreateEffect([Bridge.Ref] Vector3 pos)
@@ -423,11 +450,11 @@ public class BB10_Grid : MonoBehaviour
     }
     public bool isRowFull(int row, List<BB10_BrickCubeUnit> newCubeUnit, List<int> listColDeleted)
     {
-        if(listColDeleted.Count == 0)
+        if (listColDeleted.Count == 0)
         {
-            for(int col = 0; col < numberCol; ++col)
+            for (int col = 0; col < numberCol; ++col)
             {
-                if(grid[row, col] == null && !IsInList(row, col, newCubeUnit))
+                if (grid[row, col] == null && !IsInList(row, col, newCubeUnit))
                 {
                     return false;
                 }
@@ -435,9 +462,9 @@ public class BB10_Grid : MonoBehaviour
         }
         else
         {
-            for(int col = 0; col < numberCol; ++col)
+            for (int col = 0; col < numberCol; ++col)
             {
-                if(grid[row, col] == null && !IsInList(row, col, newCubeUnit) && !IsInListInt(col, listColDeleted))
+                if (grid[row, col] == null && !IsInList(row, col, newCubeUnit) && !IsInListInt(col, listColDeleted))
                 {
                     return false;
                 }
@@ -449,9 +476,9 @@ public class BB10_Grid : MonoBehaviour
 
     public bool isColFull(int col, List<BB10_BrickCubeUnit> newCubeUnit)
     {
-        for(int row = 0; row < numberRow; row++)
+        for (int row = 0; row < numberRow; row++)
         {
-            if(grid[row, col] == null && !IsInList(row, col, newCubeUnit))
+            if (grid[row, col] == null && !IsInList(row, col, newCubeUnit))
             {
                 return false;
             }
@@ -476,20 +503,20 @@ public class BB10_Grid : MonoBehaviour
         }
 
         return total / listFill.Count;
-    } 
+    }
 
     public void TurnOffAllFillLine()
     {
         if (listFill.Count > 0)
         {
-//            Debug.Log("run");
+            //            Debug.Log("run");
             for (int i = 0; i < listFill.Count; i++)
             {
                 grid[listFill[i].cubeRow, listFill[i].cubeCol].SetSprite(listFill[i].data);
             }
 
             ClearListFill();
-        }    
+        }
     }
 
     public void ClearListFill()
@@ -539,7 +566,7 @@ public class BB10_Grid : MonoBehaviour
                         newUnit.isWait = false;
                     }
 
-                    newList.Add(newUnit); 
+                    newList.Add(newUnit);
 
                     grid[row, col] = null;
                 }
@@ -561,25 +588,25 @@ public class BB10_Grid : MonoBehaviour
                     {
                         newUnit.isWait = false;
                     }
-                                    
-                    newList.Add(newUnit); 
+
+                    newList.Add(newUnit);
 
                     grid[row, col] = null;
                 }
             }
         }
 
-        StartCoroutine(DeleteList(newList)); 
+        StartCoroutine(DeleteList(newList));
     }
 
     public void DeleteSomeBlock()
     {
         List<BB10_BrickCubeUnit> listBlock = new List<BB10_BrickCubeUnit>();
-        for(int r = 0; r < numberRow; r++)
+        for (int r = 0; r < numberRow; r++)
         {
-            for(int c = 0; c < numberCol; c++)
+            for (int c = 0; c < numberCol; c++)
             {
-                if(grid[r, c] != null)
+                if (grid[r, c] != null)
                 {
                     listBlock.Add(grid[r, c]);
                 }
@@ -589,9 +616,9 @@ public class BB10_Grid : MonoBehaviour
         int numberDelete = Mathf.FloorToInt(listBlock.Count * 0.7f);
         List<BB10_BrickCubeUnit> listBlockDelete = new List<BB10_BrickCubeUnit>();
 
-        for(int i = 0; i < numberDelete; i++)
+        for (int i = 0; i < numberDelete; i++)
         {
-            if(listBlock.Count > 0)
+            if (listBlock.Count > 0)
             {
                 int rand = Random.Range(0, listBlock.Count);
                 listBlockDelete.Add(listBlock[rand]);
@@ -605,7 +632,7 @@ public class BB10_Grid : MonoBehaviour
 
     IEnumerator DeleteListEffect(List<BB10_BrickCubeUnit> listBlockDelete)
     {
-        for(int i = 0; i < listBlockDelete.Count; i++)
+        for (int i = 0; i < listBlockDelete.Count; i++)
         {
             listBlockDelete[i].Effect();
             yield return new WaitForSeconds(0.03f);
@@ -640,7 +667,7 @@ public class BB10_Grid : MonoBehaviour
                         newUnit.isWait = false;
                     }
 
-                    newList.Add(newUnit); 
+                    newList.Add(newUnit);
 
                     grid[row, col] = null;
                 }
@@ -663,14 +690,14 @@ public class BB10_Grid : MonoBehaviour
                         newUnit.isWait = false;
                     }
 
-                    newList.Add(newUnit); 
+                    newList.Add(newUnit);
 
                     grid[row, col] = null;
                 }
             }
         }
 
-        StartCoroutine(DeleteList(newList)); 
+        StartCoroutine(DeleteList(newList));
     }
 
     IEnumerator DeleteList(List<unitWait> newCubeUnitWait)
@@ -685,15 +712,15 @@ public class BB10_Grid : MonoBehaviour
             }
 
             newCubeUnitWait[i].unit.Effect();
-//            grid[newCubeUnitWait[i].unit.row, newCubeUnitWait[i].unit.col] = null;
+            //            grid[newCubeUnitWait[i].unit.row, newCubeUnitWait[i].unit.col] = null;
         }
     }
 
     bool IsInList(int r, int c, List<BB10_BrickCubeUnit> newCubeUnit)
     {
-        for(int i = 0; i < newCubeUnit.Count; i++)
+        for (int i = 0; i < newCubeUnit.Count; i++)
         {
-            if(newCubeUnit[i].row == r && newCubeUnit[i].col == c)
+            if (newCubeUnit[i].row == r && newCubeUnit[i].col == c)
             {
                 return true;
             }
@@ -704,9 +731,9 @@ public class BB10_Grid : MonoBehaviour
 
     public bool IsInListInt(int value, List<int> listInt)
     {
-        for(int i = 0; i < listInt.Count; i++)
+        for (int i = 0; i < listInt.Count; i++)
         {
-            if(value == listInt[i])
+            if (value == listInt[i])
             {
                 return true;
             }
@@ -736,7 +763,7 @@ public class BB10_Grid : MonoBehaviour
             }
         }
         return newCubeUnit[0];
-    }         
+    }
 
     public int insideBorder(BB10_BrickCubeUnit cubeUnit)
     {
@@ -754,7 +781,7 @@ public class BB10_Grid : MonoBehaviour
         }
 
         return 0;
-    }       
+    }
 
     public void SetAllBlock()
     {
@@ -781,8 +808,8 @@ public class BB10_Grid : MonoBehaviour
                 {
                     return new Vec2(row, col);
                 }
-            }  
-        }   
+            }
+        }
 
         return new Vec2(0, 0);
     }
@@ -798,17 +825,17 @@ public class BB10_Grid : MonoBehaviour
 
     //    CheckBundle();
     //}
-    
-    
+
+
 
     void SaveData()
     {
         string save = "";
-        for(int row = 0; row < numberRow; row++)
+        for (int row = 0; row < numberRow; row++)
         {
-            for(int col = 0; col < numberCol; col++)
+            for (int col = 0; col < numberCol; col++)
             {
-                if(grid[row, col] != null)
+                if (grid[row, col] != null)
                 {
                     //save += "1";
                     save += (grid[row, col].myData.ID + 1);
@@ -824,7 +851,7 @@ public class BB10_Grid : MonoBehaviour
         save += "+";
         //save += BB10_MainCanvasUI.Main.inGameScript.scoreInt.ToString();
 
-        if(BB10_MainObjControl.Instant.nextViewerCtr.listView[0].state == BB10_NextViewer.State.Null
+        if (BB10_MainObjControl.Instant.nextViewerCtr.listView[0].state == BB10_NextViewer.State.Null
             && BB10_MainObjControl.Instant.nextViewerCtr.listView[1].state == BB10_NextViewer.State.Null
             && BB10_MainObjControl.Instant.nextViewerCtr.listView[2].state == BB10_NextViewer.State.Null)
         {
@@ -832,10 +859,10 @@ public class BB10_Grid : MonoBehaviour
             return;
         }
 
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
         {
             save += "+";
-            if(BB10_MainObjControl.Instant.nextViewerCtr.listView[i].state != BB10_NextViewer.State.Null)
+            if (BB10_MainObjControl.Instant.nextViewerCtr.listView[i].state != BB10_NextViewer.State.Null)
             {
                 save += BB10_MainObjControl.Instant.nextViewerCtr.listView[i].myType.ToString();
                 //save += "-";
@@ -878,12 +905,12 @@ public class BB10_Grid : MonoBehaviour
 
         string[] words = wordsTotal[0].Split('-');
         int count = 0;
-        for(int row = 0; row < numberRow; row++)
+        for (int row = 0; row < numberRow; row++)
         {
-            for(int col = 0; col < numberCol; col++)
+            for (int col = 0; col < numberCol; col++)
             {
                 int number = int.Parse(words[count]);
-                if(number == 0)
+                if (number == 0)
                 {
                     Debug.Log("null");
                 }
@@ -908,9 +935,9 @@ public class BB10_Grid : MonoBehaviour
 
         BB10_MainCanvasUI.Main.inGameScript.SetScoreContinue(int.Parse(wordsTotal[1]));
 
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
         {
-            if(wordsTotal[2 + i] != "")
+            if (wordsTotal[2 + i] != "")
             {
                 string[] wordsPattem = wordsTotal[2 + i].Split('-');
                 BB10_NextViewer next = BB10_MainObjControl.Instant.nextViewerCtr.listView[i];
@@ -922,6 +949,6 @@ public class BB10_Grid : MonoBehaviour
                 next.FixCenterPos();
                 next.CheckImpossible();
             }
-        }       
+        }
     }
 }

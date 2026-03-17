@@ -25,7 +25,6 @@ public class PauseGameListener : MonoBehaviour {
 
         onClick = true;
 
-        MainAudio.Main.PlaySound(TypeAudio.SoundClick);
 
         transform.DOScale(new Vector3(1.2f, 1.2f, 1f), 0.1f)
     .SetLoops(2, LoopType.Yoyo)

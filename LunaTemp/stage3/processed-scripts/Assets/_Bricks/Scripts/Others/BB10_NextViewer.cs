@@ -25,8 +25,8 @@ public class BB10_NextViewer : MonoBehaviour
         {
             listBlock[i].viewer = this;
         }
-        if(isRotate)
-            RotatePattem(numberRotate);
+        //if (isRotate)
+        //    RotatePattem(numberRotate);
 
         FixCenterPos();
 
@@ -203,7 +203,7 @@ public class BB10_NextViewer : MonoBehaviour
                 scale
             );
 
-            MainAudio.Main.PlaySound(TypeAudio.SellectPattem);
+            //MainAudio.Main.PlaySound(TypeAudio.SellectPattem);
             HideAllBlock();
 
             if (BB10_MainState.typePlay == BB10_MainState.TypePlay.Tutorial)
@@ -236,13 +236,13 @@ public class BB10_NextViewer : MonoBehaviour
             }
         }
     }
-
     public void GreyWhenGameOver()
     {
         if(state != State.Null)
         {
             if(BB10_MainObjControl.Instant.grid.InvalidPlacePattem(listBlock))
             {
+                Debug.Log("Game Over");
                 StartCoroutine(StartSetLight(GameDefine.pattemLightAlpha, GameDefine.pattemDarkAlpha));
             }
         }

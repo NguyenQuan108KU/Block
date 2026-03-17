@@ -97,7 +97,7 @@ public class BB10_LostScript : MonoBehaviour
         group.alpha = 0;
         if (isGray)
         {
-            MainAudio.Main.PlaySound(TypeAudio.SoundLose);
+            //MainAudio.Main.PlaySound(TypeAudio.SoundLose);
         }
 
         if (isAuto)
@@ -146,7 +146,7 @@ public class BB10_LostScript : MonoBehaviour
             yield return new WaitForSeconds(0.04f);
             current = Mathf.Min(score, current + unit);
             SetScore(current);
-            MainAudio.Main.PlaySound(TypeAudio.SoundScore);
+            //MainAudio.Main.PlaySound(TypeAudio.SoundScore);
         }
 
         SetScore(score);
@@ -175,7 +175,7 @@ public class BB10_LostScript : MonoBehaviour
 
         //starFullImage.SetActive(true);
 
-        MainAudio.Main.PlaySound(TypeAudio.SoundBoom);
+        //MainAudio.Main.PlaySound(TypeAudio.SoundBoom);
         //yield return new WaitForSeconds(0.1f);
         cupShaker.StartShake();
         yield return new WaitForSeconds(0.5f);

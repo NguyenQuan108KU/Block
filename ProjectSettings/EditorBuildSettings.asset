@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/BlockBricks/Basic1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Demo.unity
     guid: 3321089c7171c3e418deaa3c4f8ed315
+  - enabled: 1
+    path: Assets/Scenes/BlockBricks2019/DemoArt.unity
+    guid: 6c7bfbcad02243143b67db8b4473a050
   m_configObjects: {}

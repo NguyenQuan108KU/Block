@@ -84,8 +84,6 @@ public class BB10_PauseScript : MonoBehaviour
             BB10_Settings.SetSound(1);
             MainAudio.Main.MuteSound(false);
         }
-
-        MainAudio.Main.PlaySound(TypeAudio.SoundClick);
     }
 
                                

@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: atlas-game-over
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 02b422188848cf9478c3d31fcfaa5f59, type: 3}
+    - {fileID: 102900000, guid: f09016aa13d28d444a8815f1315ea920, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 03b010116714dd147808aa336eebaaa1: 21300000
+    - ef9d4ab16d5610d4f8e4c30c2070fc30: 21300000
+    - a4ca639257aa2b74784bec030817363f: 21300000
+    - 21db50b2554fdd24b867477ade6d9335: 21300000
+    - 6b06fa0454f581449b75aa22f233e44e: 21300000
+    - 6c4a58d4fc77b5147bc0da69a54956ca: 21300000
+    - 7574ac4580f658f4da56052621bbe459: 21300000
+    - ae722865328564e4292fc3ccb3b97192: 21300000
+    - f876a9955881a044bac660a0d22b0fd1: 21300000
+    - 82512c063a2ddaa4eabc7dd662384c7c: 21300000
+    - 3e92bc562ad9b094f9bb93c24d93d776: 21300000
+    - c9bbe586d3899114786a2aad2b66dd41: 21300000
+    - 447af107bc74aac45bdc7999bac700b3: 21300000
+    - 3df12427cbdfde944ae917a71a2db31c: 21300000
+    - 4e7d36f762e1f2c4cb21e0d6d4262a88: 21300000
+    - 93edfb084e69b2d4c9a61ae8364bda09: 21300000
+    - 7ec94c1959823ad4eb711ab7c7a4ec9c: 21300000
+    - 173fa059d2c5820408717e8e25b6ffb2: 21300000
+    - 4be5526996618eb4c93670b3e6a00e5c: 21300000
+    - 347a480adcb666a49849fa881a4cc077: 21300000
+    - 89e29abaa58b931449eb51e93aba502a: 21300000
+    - 589d742d4686a764c9d8961b55673ea4: 21300000
+    - 5e6cd6adb9d9e4d4cbabfb9a409009ff: 21300000
+    - 435edd5e1efc79d47ba6c788242969c6: 21300000
+    - ecfb188e65165bc4688d5ec8eb63d9a2: 21300000
+    - bf7465aefde437a48a5609368740ee26: 21300000
+    - 45a3bd6fe371e3744a6859c30f563d6c: 21300000
+    - ee5afe8f9832b40438616cbb8d271539: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 03b010116714dd147808aa336eebaaa1, type: 3}
+  - {fileID: 21300000, guid: ef9d4ab16d5610d4f8e4c30c2070fc30, type: 3}
+  - {fileID: 21300000, guid: a4ca639257aa2b74784bec030817363f, type: 3}
+  - {fileID: 21300000, guid: 21db50b2554fdd24b867477ade6d9335, type: 3}
+  - {fileID: 21300000, guid: 6b06fa0454f581449b75aa22f233e44e, type: 3}
+  - {fileID: 21300000, guid: 6c4a58d4fc77b5147bc0da69a54956ca, type: 3}
+  - {fileID: 21300000, guid: 7574ac4580f658f4da56052621bbe459, type: 3}
+  - {fileID: 21300000, guid: ae722865328564e4292fc3ccb3b97192, type: 3}
+  - {fileID: 21300000, guid: f876a9955881a044bac660a0d22b0fd1, type: 3}
+  - {fileID: 21300000, guid: 82512c063a2ddaa4eabc7dd662384c7c, type: 3}
+  - {fileID: 21300000, guid: 3e92bc562ad9b094f9bb93c24d93d776, type: 3}
+  - {fileID: 21300000, guid: c9bbe586d3899114786a2aad2b66dd41, type: 3}
+  - {fileID: 21300000, guid: 447af107bc74aac45bdc7999bac700b3, type: 3}
+  - {fileID: 21300000, guid: 3df12427cbdfde944ae917a71a2db31c, type: 3}
+  - {fileID: 21300000, guid: 4e7d36f762e1f2c4cb21e0d6d4262a88, type: 3}
+  - {fileID: 21300000, guid: 93edfb084e69b2d4c9a61ae8364bda09, type: 3}
+  - {fileID: 21300000, guid: 7ec94c1959823ad4eb711ab7c7a4ec9c, type: 3}
+  - {fileID: 21300000, guid: 173fa059d2c5820408717e8e25b6ffb2, type: 3}
+  - {fileID: 21300000, guid: 4be5526996618eb4c93670b3e6a00e5c, type: 3}
+  - {fileID: 21300000, guid: 347a480adcb666a49849fa881a4cc077, type: 3}
+  - {fileID: 21300000, guid: 89e29abaa58b931449eb51e93aba502a, type: 3}
+  - {fileID: 21300000, guid: 589d742d4686a764c9d8961b55673ea4, type: 3}
+  - {fileID: 21300000, guid: 5e6cd6adb9d9e4d4cbabfb9a409009ff, type: 3}
+  - {fileID: 21300000, guid: 435edd5e1efc79d47ba6c788242969c6, type: 3}
+  - {fileID: 21300000, guid: ecfb188e65165bc4688d5ec8eb63d9a2, type: 3}
+  - {fileID: 21300000, guid: bf7465aefde437a48a5609368740ee26, type: 3}
+  - {fileID: 21300000, guid: 45a3bd6fe371e3744a6859c30f563d6c, type: 3}
+  - {fileID: 21300000, guid: ee5afe8f9832b40438616cbb8d271539, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Right
+  - game_over_play
+  - button_5stars
+  - 2
+  - 6
+  - bottom
+  - Corner1
+  - Corner3
+  - Background
+  - Star2
+  - border
+  - Rate
+  - board4
+  - Corner4
+  - top
+  - button_rateus
+  - Best
+  - button_4stars
+  - 5
+  - Cup
+  - Star1
+  - RePlay
+  - button_close
+  - 1
+  - Score
+  - Left
+  - Corner2
+  - go3
+  m_RenderDataMap: {}
+  m_Tag: atlas-game-over
+  m_IsVariant: 0

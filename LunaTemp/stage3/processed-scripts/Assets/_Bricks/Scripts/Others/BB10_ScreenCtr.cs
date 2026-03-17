@@ -181,7 +181,7 @@ public class BB10_ScreenCtr : MonoBehaviour
         //    grid[i].transform.localScale = Vector3.zero;
         //}
 
-        MainAudio.Main.PlaySound(TypeAudio.StartGame);
+        //MainAudio.Main.PlaySound(TypeAudio.StartGame);
 
         StartCoroutine(Step());
     }

@@ -95,6 +95,7 @@ public class BB10_NextViewerControl : MonoBehaviour
 
     public void GreyWhenGameOver()
     {
+        Debug.Log("Game Over");
         listView[0].GreyWhenGameOver();
         listView[1].GreyWhenGameOver();
         listView[2].GreyWhenGameOver();    
@@ -104,9 +105,9 @@ public class BB10_NextViewerControl : MonoBehaviour
     {
         if (IsGameOver())
         {
-            //BB10_MainCanvasUI.Main.lostScript.GameOver(true);
-            BB10_MainCanvasUI.Main.StopWaitShowAdBreask();
-
+            Debug.Log("Game Over");
+            TimerProgress.Instance.StopTimer();
+            GamePlayManager.Instance.GameOver(false);
             GreyWhenGameOver();
         }
     }
