@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Brick_Jewel
   m_EditorClassIdentifier: 
   spawnGroups:
-  - block1: 1
+  - block1: 3
     block2: 16
-    block3: 1
+    block3: 0

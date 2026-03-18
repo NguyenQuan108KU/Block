@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -777816280, guid: 2c044afaeba33ae499fde08a364f9504, type: 3}
+  m_Script: {fileID: -777816280, guid: f167073fa77d59c42a760fc88b8c7b46, type: 3}
   m_Name: SVC_Luna
   m_EditorClassIdentifier: 
   _svcLunaVersion: 3
@@ -564,9 +564,23 @@ MonoBehaviour:
     upToDate: 0
     keywords:
     - UNDERLAY_ON
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords: []
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords: []
   _includedShaderVariants: []
   _excludedShaderVariants: []
-  version: 171
+  version: 297
   _shaderParsedShaders:
   - ParsedSubShaders:
     - Index: 0
@@ -8505,7 +8519,7 @@ MonoBehaviour:
   _sceneLightData:
     PointLightCount: 0
     SpotLightCount: 0
-    DirectionalLightCount: 8
+    DirectionalLightCount: 4
     LightmapOn: 1
     DirlightmapCombined: 1
     DirectionalCookieExists: 0

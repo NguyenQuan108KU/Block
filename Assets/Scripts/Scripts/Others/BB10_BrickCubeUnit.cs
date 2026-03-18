@@ -49,6 +49,7 @@ public class BB10_BrickCubeUnit : MonoBehaviour
                     OnClickBlock();
                     GamePlayManager.Instance.UpClick();
                     TutorialManager.Instance.Hand.SetActive(false);
+                    TutorialManager.Instance.TextTut.SetActive(false);
                     MainAudio.Main.PlaySound(TypeAudio.SoundClick);
                     break;
                 }

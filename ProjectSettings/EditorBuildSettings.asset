@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BlockBricks2019/DemoArt.unity
     guid: 6c7bfbcad02243143b67db8b4473a050
+  - enabled: 1
+    path: Assets/Scenes/BlockBricks2019/Brick_2019.unity
+    guid: b3f60d2d40a890d4f9a3e6f1842d2fa1
+  - enabled: 1
+    path: Assets/Scenes/BlockJewel/BlockJewel.unity
+    guid: 220ec39878814f642960b7f1cade1800
   m_configObjects: {}

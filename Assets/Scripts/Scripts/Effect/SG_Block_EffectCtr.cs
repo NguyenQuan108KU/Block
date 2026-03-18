@@ -20,22 +20,23 @@ public class SG_Block_EffectCtr : MonoBehaviour
     }
 
     public ParticleSystem GetParticle(int ID)
-    {
-        //ID = 0;
-        ParticleSystem particle;
-        if(listParticlesDisable[ID].Count == 0)
-        {
-            particle = Instantiate(particlePrefabs[ID].GetComponent<ParticleSystem>());
-        }
-        else
-        {
-            particle = listParticlesDisable[ID][listParticlesDisable[ID].Count - 1];
-            listParticlesDisable[ID].RemoveAt(listParticlesDisable[ID].Count - 1);
-            particle.gameObject.SetActive(true);
-        }
+{
+    ParticleSystem particle;
 
-        return particle;
+    if (listParticlesDisable[ID].Count == 0)
+    {
+        GameObject obj = Instantiate(particlePrefabs[ID]);
+        particle = obj.GetComponent<ParticleSystem>();
     }
+    else
+    {
+        particle = listParticlesDisable[ID][listParticlesDisable[ID].Count - 1];
+        listParticlesDisable[ID].RemoveAt(listParticlesDisable[ID].Count - 1);
+        particle.gameObject.SetActive(true);
+    }
+
+    return particle;
+}
 
     public void SetParticle(ParticleSystem particle, int ID)
     {
